@@ -1,5 +1,5 @@
 # Elemactary-Dark
-MacOS Style theme for ElementaryOS
+<b>MacOS Style theme for ElementaryOS</b>
 
 [Elemactary-Dark](https://www.gnome-look.org/p/1406950/)
 
