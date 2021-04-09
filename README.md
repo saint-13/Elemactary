@@ -14,10 +14,19 @@ hope you like it.
 
 Screenshots : 
 
-![Screenshot 1](https://github.com/saint-13/Elemactary-Dark/blob/master/Screenshot/Screenshot%20from%202020-07-25%2023-35-14.png)
-
-![Screenshot 2](https://github.com/saint-13/Elemactary-Dark/blob/master/Screenshot/Screenshot%20from%202020-07-25%2023-35-25.png)
-
-![Screenshot 3](https://github.com/saint-13/Elemactary-Dark/blob/master/Screenshot/Screenshot%20from%202020-07-25%2023-35-36.png)
-
-![Screenshot 4](https://github.com/saint-13/Elemactary-Dark/blob/master/Screenshot/Screenshot%20from%202020-07-26%2000-48-40.png)
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/saint-13/Elemactary-Dark/blob/master/Screenshot/Screenshot%20from%202020-07-25%2023-35-14.png" width="256">
+    </td>
+    <td>
+      <img src="https://github.com/saint-13/Elemactary-Dark/blob/master/Screenshot/Screenshot%20from%202020-07-25%2023-35-25.png" width="256">
+    </td>
+    <td>
+      <img src="https://github.com/saint-13/Elemactary-Dark/blob/master/Screenshot/Screenshot%20from%202020-07-25%2023-35-36.png" width="256">
+    </td>
+    <td>
+      <img src="https://github.com/saint-13/Elemactary-Dark/blob/master/Screenshot/Screenshot%20from%202020-07-26%2000-48-40.png" width="256">
+    </td>
+  </tr>
+</table>
