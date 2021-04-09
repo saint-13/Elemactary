@@ -13,11 +13,7 @@ change your theme from: setting > tweaks > GTK+ > Elemactary-Dark
 hope you like it. 
 
 <table>
-  <tr>
-    <th>
-      Screenshots
-    </th>
-  </tr>
+  <caption style="caption-side:bottom">Screenshots</caption>
   <tr>
     <td>
       <img src="https://github.com/saint-13/Elemactary-Dark/blob/master/Screenshot/Screenshot%20from%202020-07-25%2023-35-14.png" width="256">
