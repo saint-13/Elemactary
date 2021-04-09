@@ -12,7 +12,7 @@ change your theme from: setting > tweaks > GTK+ > Elemactary-Dark
 
 hope you like it. 
 
-SCREENSHOTS:
+<b>SCREENSHOTS:</b>
 
 <table>
   <tr>
