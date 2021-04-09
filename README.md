@@ -12,6 +12,17 @@ change your theme from: setting > tweaks > GTK+ > Elemactary-Dark
 
 hope you like it. 
 
+<style>
+table,th,td {
+  border:1px solid black;
+}
+
+caption { 
+  display: table-caption;
+  text-align: center;
+}
+</style>
+
 <table>
   <caption style="caption-side:bottom">Screenshots</caption>
   <tr>
