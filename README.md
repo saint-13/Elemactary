@@ -1,5 +1,7 @@
-<img src="https://raw.githubusercontent.com/saint-13/Elemactary-Dark/master/Screenshot/Elemactary-Dark-logo.png" width="256">
 # Elemactary-Dark
+
+<img src="https://raw.githubusercontent.com/saint-13/Elemactary-Dark/master/Screenshot/Elemactary-Dark-logo.png" width="256">
+
 <b>MacOS Style theme for ElementaryOS</b>
 
 [Elemactary-Dark](https://www.gnome-look.org/p/1406950/)
