@@ -1,4 +1,4 @@
-# Elemactary-Dark
+# Elemactary
 
 <img src="https://raw.githubusercontent.com/saint-13/Elemactary-Dark/master/Screenshot/Elemactary-Dark-logo.png" width="128">
 
