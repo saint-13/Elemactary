@@ -8,7 +8,7 @@
 
 <b>THIS THEME IS JUST FOR Elementary OS!</b>
 
-may work on other DEs, BUT not guaranteed.
+   * may work on other DEs, BUT not guaranteed.
 
 [Versoin 2.0](https://github.com/saint-13/Elemactary-Dark/releases/download/Elemactary_2.0_BETA/Elemactary-v2.0-Beta.zip) works best in ElementaryOS 6 Odin:
 
