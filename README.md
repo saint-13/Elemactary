@@ -19,13 +19,15 @@ may work on other DEs, BUT not guaranteed.
 
 [Versoin 1.2](https://github.com/saint-13/Elemactary-Dark/releases/download/Elemactary_1.2/Elemactary-Dark-v1.2.zip) works best in ElementaryOS 5 Hera:
 
-   it's based on default EOS dark theme and ElementaryX theme, default EOS theme had some problem with dark mode. and ElementaryX had some blueish accent which i didn't like, so i made my own version.
+   * it's based on default EOS dark theme and ElementaryX theme. 
+   * default EOS theme had some problem with dark mode. 
+   * ElementaryX had some blueish accent which i didn't like, so i made my own version.
 
 <b>INSTALLATIN: </b>
 
-   download the [Version 1.2](https://github.com/saint-13/Elemactary-Dark/releases/download/Elemactary_1.2/Elemactary-Dark-v1.2.zip) or [Version 2.0](https://github.com/saint-13/Elemactary-Dark/releases/download/Elemactary_2.0_BETA/Elemactary-v2.0-Beta.zip)
-   extract it, and put it in: /usr/share/themes 
-   change your theme from: setting > tweaks > GTK+ > Elemactary 
+   * download the [Version 1.2](https://github.com/saint-13/Elemactary-Dark/releases/download/Elemactary_1.2/Elemactary-Dark-v1.2.zip) or [Version 2.0](https://github.com/saint-13/Elemactary-Dark/releases/download/Elemactary_2.0_BETA/Elemactary-v2.0-Beta.zip)
+   * extract it, and put it in: /usr/share/themes 
+   * change your theme from: setting > tweaks > GTK+ > Elemactary 
 
 hope you like it. 
 
