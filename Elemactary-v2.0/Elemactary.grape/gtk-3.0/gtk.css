@@ -1,0 +1,2595 @@
+/*
+* Copyright 2020 elementary, Inc. (https://elementary.io)
+*
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public
+* License as published by the Free Software Foundation; either
+* version 3 of the License, or (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* General Public License for more details.
+*
+* You should have received a copy of the GNU General Public
+* License along with this program; if not, write to the
+* Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+* Boston, MA 02110-1301 USA.
+*/
+@define-color STRAWBERRY_100 #ff8c82;
+@define-color STRAWBERRY_300 #ed5353;
+@define-color STRAWBERRY_500 #c6262e;
+@define-color STRAWBERRY_700 #a10705;
+@define-color STRAWBERRY_900 #7a0000;
+@define-color ORANGE_100 #ffc27d;
+@define-color ORANGE_300 #ffa154;
+@define-color ORANGE_500 #f37329;
+@define-color ORANGE_700 #cc3b02;
+@define-color ORANGE_900 #a62100;
+@define-color BANANA_100 #fff394;
+@define-color BANANA_300 #ffe16b;
+@define-color BANANA_500 #f9c440;
+@define-color BANANA_700 #d48e15;
+@define-color BANANA_900 #ad5f00;
+@define-color LIME_100 #d1ff82;
+@define-color LIME_300 #9bdb4d;
+@define-color LIME_500 #68b723;
+@define-color LIME_700 #3a9104;
+@define-color LIME_900 #206b00;
+@define-color MINT_100 #89ffdd;
+@define-color MINT_300 #43d6b5;
+@define-color MINT_500 #28bca3;
+@define-color MINT_700 #0e9a83;
+@define-color MINT_900 #007367;
+@define-color BLUEBERRY_100 #8cd5ff;
+@define-color BLUEBERRY_300 #64baff;
+@define-color BLUEBERRY_500 #3689e6;
+@define-color BLUEBERRY_700 #0d52bf;
+@define-color BLUEBERRY_900 #002e99;
+@define-color BUBBLEGUM_100 #fe9ab8;
+@define-color BUBBLEGUM_300 #f4679d;
+@define-color BUBBLEGUM_500 #de3e80;
+@define-color BUBBLEGUM_700 #bc245d;
+@define-color BUBBLEGUM_900 #910e38;
+@define-color GRAPE_100 #e4c6fa;
+@define-color GRAPE_300 #cd9ef7;
+@define-color GRAPE_500 #a56de2;
+@define-color GRAPE_700 #7239b3;
+@define-color GRAPE_900 #452981;
+@define-color COCOA_100 #a3907c;
+@define-color COCOA_300 #8a715e;
+@define-color COCOA_500 #715344;
+@define-color COCOA_700 #57392d;
+@define-color COCOA_900 #3d211b;
+@define-color SILVER_100 #fafafa;
+@define-color SILVER_300 #d4d4d4;
+@define-color SILVER_500 #abacae;
+@define-color SILVER_700 #7e8087;
+@define-color SILVER_900 #555761;
+@define-color SLATE_100 #95a3ab;
+@define-color SLATE_300 #667885;
+@define-color SLATE_500 #485a6c;
+@define-color SLATE_700 #273445;
+@define-color SLATE_900 #0e141f;
+@define-color BLACK_100 #666;
+@define-color BLACK_300 #4d4d4d;
+@define-color BLACK_500 #333;
+@define-color BLACK_700 #1a1a1a;
+@define-color BLACK_900 #000;
+/* Accent Shades */
+@define-color accent_color_100 @GRAPE_100;
+@define-color accent_color_300 @GRAPE_300;
+@define-color accent_color_500 @GRAPE_500;
+@define-color accent_color_700 @GRAPE_700;
+@define-color accent_color_900 @GRAPE_900;
+@define-color accent_color mix(@GRAPE_300, @GRAPE_500, 0.5);
+assistant .titlebar,
+printdialog .titlebar,
+window:not(.popup):not(.menu) .titlebar, actionbar,
+.bottom-toolbar, switch slider, switch:checked:not(.mode-switch):not(:backdrop), scale slider, progressbar.horizontal progress:backdrop, progressbar.horizontal trough, levelbar.horizontal block, check,
+radio, .linked button.flat, .linked .sidebar .inline-toolbar button, .linked .sidebar actionbar.flat button,
+.linked .sidebar .bottom-toolbar.flat button,
+.linked .sidebar tab .bottom-toolbar.tab-close-button button,
+tab .linked .sidebar .bottom-toolbar.tab-close-button button,
+.linked .sidebar tab .bottom-toolbar.tab-indicator button,
+tab .linked .sidebar .bottom-toolbar.tab-indicator button,
+.emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button, .sidebar .inline-toolbar .linked button, .sidebar actionbar.flat .linked button,
+.sidebar .bottom-toolbar.flat .linked button,
+.sidebar tab .bottom-toolbar.tab-close-button .linked button,
+tab .sidebar .bottom-toolbar.tab-close-button .linked button,
+.sidebar tab .bottom-toolbar.tab-indicator .linked button,
+tab .sidebar .bottom-toolbar.tab-indicator .linked button, .linked .sidebar .emoji-picker stack box > box.horizontal button, .sidebar .emoji-picker stack box > box.horizontal .linked button, .linked .emoji-picker stack .sidebar box > box.horizontal button, .emoji-picker stack .sidebar box > box.horizontal .linked button, .linked tab button.tab-close-button, tab .linked button.tab-close-button,
+.linked tab button.tab-indicator,
+tab .linked button.tab-indicator, .linked button.image-button, .linked button.image-button:not(.text-button), button.circular.image-button, button.model.image-button, button.raised.image-button, button, avatar {
+  background-image: linear-gradient(to bottom, alpha(@highlight_color, 0.2), rgba(255, 255, 255, 0)); }
+  assistant .titlebar:backdrop,
+  printdialog .titlebar:backdrop,
+  window:not(.popup):not(.menu) .titlebar:backdrop, actionbar:backdrop,
+  .bottom-toolbar:backdrop, switch slider:backdrop, switch:backdrop:checked:not(.mode-switch):not(:backdrop), scale slider:backdrop, progressbar.horizontal progress:backdrop, progressbar.horizontal trough:backdrop, levelbar.horizontal block:backdrop, check:backdrop,
+  radio:backdrop, .linked button.flat:backdrop, .linked .sidebar .inline-toolbar button:backdrop, .linked .sidebar actionbar.flat button:backdrop,
+  .linked .sidebar .bottom-toolbar.flat button:backdrop,
+  .linked .sidebar tab .bottom-toolbar.tab-close-button button:backdrop,
+  tab .linked .sidebar .bottom-toolbar.tab-close-button button:backdrop,
+  .linked .sidebar tab .bottom-toolbar.tab-indicator button:backdrop,
+  tab .linked .sidebar .bottom-toolbar.tab-indicator button:backdrop,
+  .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button:backdrop, .sidebar .inline-toolbar .linked button:backdrop, .sidebar actionbar.flat .linked button:backdrop,
+  .sidebar .bottom-toolbar.flat .linked button:backdrop,
+  .sidebar tab .bottom-toolbar.tab-close-button .linked button:backdrop,
+  tab .sidebar .bottom-toolbar.tab-close-button .linked button:backdrop,
+  .sidebar tab .bottom-toolbar.tab-indicator .linked button:backdrop,
+  tab .sidebar .bottom-toolbar.tab-indicator .linked button:backdrop, .linked .sidebar .emoji-picker stack box > box.horizontal button:backdrop, .sidebar .emoji-picker stack box > box.horizontal .linked button:backdrop, .linked .emoji-picker stack .sidebar box > box.horizontal button:backdrop, .emoji-picker stack .sidebar box > box.horizontal .linked button:backdrop, .linked tab button.tab-close-button:backdrop, tab .linked button.tab-close-button:backdrop,
+  .linked tab button.tab-indicator:backdrop,
+  tab .linked button.tab-indicator:backdrop, .linked button.image-button:backdrop, button.circular.image-button:backdrop, button.model.image-button:backdrop, button.raised.image-button:backdrop, button:backdrop, avatar:backdrop {
+    background-image: linear-gradient(to bottom, alpha(@highlight_color, 0.35), alpha(@highlight_color, 0.3)); }
+
+progressbar.vertical progress,
+progressbar.vertical trough, levelbar.vertical block {
+  background-image: linear-gradient(to right, alpha(@highlight_color, 0.2), rgba(255, 255, 255, 0)); }
+  progressbar.vertical progress:backdrop,
+  progressbar.vertical trough:backdrop, levelbar.vertical block:backdrop {
+    background-image: linear-gradient(to right, alpha(@highlight_color, 0.35), alpha(@highlight_color, 0.3)); }
+
+.spin {
+  animation: spin 600ms linear infinite; }
+
+@keyframes spin {
+  to {
+    -gtk-icon-transform: rotate(1turn); } }
+
+@define-color highlight_color white;
+@define-color color_primary #dfdfdf;
+@define-color placeholder_text_color #666666;
+@define-color error_color #c6262e;
+@define-color success_color #3a9104;
+@define-color warning_color #ad5f00;
+@define-color menu_separator rgba(0, 0, 0, 0.15);
+@define-color menu_separator_shadow rgba(255, 255, 255, 0.8);
+@define-color selected_bg_color alpha(@accent_color, 0.25);
+@define-color selected_fg_color shade(@accent_color, 0.5);
+@define-color theme_unfocused_selected_bg_color alpha(@text_color, 0.10);
+@define-color theme_unfocused_selected_fg_color #333;
+@define-color base_color white;
+@define-color theme_base_color white;
+@define-color theme_unfocused_base_color white;
+@define-color insensitive_base_color rgba(0, 0, 0, 0.03);
+@define-color borders rgba(0, 0, 0, 0.2);
+@define-color unfocused_borders rgba(0, 0, 0, 0.2);
+@define-color bg_color #fafafa;
+@define-color theme_bg_color #fafafa;
+@define-color content_view_bg #fafafa;
+@define-color insensitive_bg_color #f1f1f1;
+@define-color theme_unfocused_bg_color #fafafa;
+@define-color fg_color #333;
+@define-color theme_fg_color #333;
+@define-color insensitive_fg_color #979797;
+@define-color unfocused_insensitive_color #979797;
+@define-color text_color #333;
+@define-color theme_text_color #333;
+@define-color theme_unfocused_fg_color #333;
+@define-color theme_unfocused_text_color #333;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+@define-color wm_shadow rgba(0, 0, 0, 0.2);
+.h1 {
+  font-size: 24pt;
+  font-weight: 700;
+  letter-spacing: -0.04em; }
+
+.h2 {
+  font-weight: 300;
+  font-size: 18pt;
+  letter-spacing: -0.05em; }
+
+.h3 {
+  font-size: 11pt; }
+
+label.h4, .emoji-picker box.vertical > label,
+.h4 label,
+.emoji-picker box.vertical > label label {
+  font-weight: 700;
+  opacity: 0.8;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em; }
+
+.primary {
+  font-weight: 500;
+  font-size: 1.22em; }
+
+.small-label, viewswitcher button stack > box.narrow {
+  font-size: 0.85em; }
+
+.accent,
+.link,
+:link {
+  color: shade(@accent_color, 0.75); }
+  .accent.red,
+  .link.red,
+  :link.red {
+    color: #c6262e; }
+  .accent.orange,
+  .link.orange,
+  :link.orange {
+    color: #cc3b02; }
+  .accent.yellow,
+  .link.yellow,
+  :link.yellow {
+    color: #c1770b; }
+  .accent.green,
+  .link.green,
+  :link.green {
+    color: #2d7e02; }
+  .accent.blue,
+  .link.blue,
+  :link.blue {
+    color: #226ed3; }
+  .accent.purple,
+  .link.purple,
+  :link.purple {
+    color: #8c53cb; }
+  .accent.brown,
+  .link.brown,
+  :link.brown {
+    color: #8a715e; }
+  .accent.mint,
+  .link.mint,
+  :link.mint {
+    color: #0e9a83; }
+  .accent.pink,
+  .link.pink,
+  :link.pink {
+    color: #cd316f; }
+  .accent.slate,
+  .link.slate,
+  :link.slate {
+    color: #5f717f; }
+  .accent:backdrop,
+  .link:backdrop,
+  :link:backdrop {
+    color: #333;
+    opacity: 0.6; }
+
+.dim-label,
+:visited {
+  opacity: 0.75; }
+
+label:disabled {
+  color: #979797; }
+
+.keycap {
+  background-color: #fafafa;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), alpha(@highlight_color, 0.2));
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.250000001rem;
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), inset 0 -1px 0 0 #dfdfdf, 0 1px 2px rgba(0, 0, 0, 0.05);
+  font-size: 85%;
+  min-width: 1.000000001rem;
+  padding: 0.250000001rem 0.500000001rem calc(0.250000001rem + 1px); }
+  .keycap:backdrop {
+    background-image: linear-gradient(to bottom, alpha(@highlight_color, 0.3), alpha(@highlight_color, 0.35)); }
+
+:link:hover label {
+  text-decoration: underline; }
+
+.monospace {
+  font-family: monospace; }
+
+image:disabled {
+  -gtk-icon-effect: dim; }
+
+selection, flowboxchild:focus:selected, iconview.view.cell:focus:selected, treeview.view.cell:focus:selected, list row:focus:selected, calendar:selected, .linked button.flat.suggested-action:not(:disabled), .linked .sidebar .inline-toolbar button.suggested-action:not(:disabled), .linked .sidebar actionbar.flat button.suggested-action:not(:disabled),
+.linked .sidebar .bottom-toolbar.flat button.suggested-action:not(:disabled),
+.linked .sidebar tab .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled),
+tab .linked .sidebar .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled),
+.linked .sidebar tab .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled),
+tab .linked .sidebar .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled),
+.emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button.suggested-action:not(:disabled), .sidebar .inline-toolbar .linked button.suggested-action:not(:disabled), .sidebar actionbar.flat .linked button.suggested-action:not(:disabled),
+.sidebar .bottom-toolbar.flat .linked button.suggested-action:not(:disabled),
+.sidebar tab .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled),
+tab .sidebar .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled),
+.sidebar tab .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled),
+tab .sidebar .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled), .linked .sidebar .emoji-picker stack box > box.horizontal button.suggested-action:not(:disabled), .sidebar .emoji-picker stack box > box.horizontal .linked button.suggested-action:not(:disabled), .linked .emoji-picker stack .sidebar box > box.horizontal button.suggested-action:not(:disabled), .emoji-picker stack .sidebar box > box.horizontal .linked button.suggested-action:not(:disabled), .linked tab button.suggested-action.tab-close-button:not(:disabled), tab .linked button.suggested-action.tab-close-button:not(:disabled),
+.linked tab button.suggested-action.tab-indicator:not(:disabled),
+tab .linked button.suggested-action.tab-indicator:not(:disabled), .linked button.image-button.suggested-action:not(:disabled), button.circular.image-button.suggested-action:not(:disabled), button.model.image-button.suggested-action:not(:disabled), button.raised.image-button.suggested-action:not(:disabled), button.suggested-action:not(:disabled), button.flat:focus, .sidebar .inline-toolbar button:focus, .sidebar actionbar.flat button:focus,
+.sidebar .bottom-toolbar.flat button:focus,
+.sidebar tab .bottom-toolbar.tab-close-button button:focus,
+tab .sidebar .bottom-toolbar.tab-close-button button:focus,
+.sidebar tab .bottom-toolbar.tab-indicator button:focus,
+tab .sidebar .bottom-toolbar.tab-indicator button:focus, .sidebar .emoji-picker stack box > box.horizontal button:focus, .emoji-picker stack .sidebar box > box.horizontal button:focus, tab button.tab-close-button:focus,
+tab button.tab-indicator:focus, button.image-button:not(.text-button):focus, .badge.flat, .sidebar .inline-toolbar button.badge, .sidebar actionbar.flat button.badge,
+.sidebar .bottom-toolbar.flat button.badge,
+.sidebar tab .bottom-toolbar.tab-close-button button.badge,
+tab .sidebar .bottom-toolbar.tab-close-button button.badge,
+.sidebar tab .bottom-toolbar.tab-indicator button.badge,
+tab .sidebar .bottom-toolbar.tab-indicator button.badge, .sidebar .emoji-picker stack box > box.horizontal button.badge, .emoji-picker stack .sidebar box > box.horizontal button.badge, tab .badge.tab-close-button,
+tab .badge.tab-indicator {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color; }
+  selection:backdrop, flowboxchild:backdrop:focus:selected, iconview.view.cell:backdrop:focus:selected, treeview.view.cell:backdrop:focus:selected, list row:backdrop:focus:selected, calendar:backdrop:selected, .linked button.flat.suggested-action:backdrop:not(:disabled), .linked .sidebar .inline-toolbar button.suggested-action:backdrop:not(:disabled), .linked .sidebar actionbar.flat button.suggested-action:backdrop:not(:disabled),
+  .linked .sidebar .bottom-toolbar.flat button.suggested-action:backdrop:not(:disabled),
+  .linked .sidebar tab .bottom-toolbar.tab-close-button button.suggested-action:backdrop:not(:disabled),
+  tab .linked .sidebar .bottom-toolbar.tab-close-button button.suggested-action:backdrop:not(:disabled),
+  .linked .sidebar tab .bottom-toolbar.tab-indicator button.suggested-action:backdrop:not(:disabled),
+  tab .linked .sidebar .bottom-toolbar.tab-indicator button.suggested-action:backdrop:not(:disabled),
+  .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button.suggested-action:backdrop:not(:disabled), .sidebar .inline-toolbar .linked button.suggested-action:backdrop:not(:disabled), .sidebar actionbar.flat .linked button.suggested-action:backdrop:not(:disabled),
+  .sidebar .bottom-toolbar.flat .linked button.suggested-action:backdrop:not(:disabled),
+  .sidebar tab .bottom-toolbar.tab-close-button .linked button.suggested-action:backdrop:not(:disabled),
+  tab .sidebar .bottom-toolbar.tab-close-button .linked button.suggested-action:backdrop:not(:disabled),
+  .sidebar tab .bottom-toolbar.tab-indicator .linked button.suggested-action:backdrop:not(:disabled),
+  tab .sidebar .bottom-toolbar.tab-indicator .linked button.suggested-action:backdrop:not(:disabled), .linked .sidebar .emoji-picker stack box > box.horizontal button.suggested-action:backdrop:not(:disabled), .sidebar .emoji-picker stack box > box.horizontal .linked button.suggested-action:backdrop:not(:disabled), .linked .emoji-picker stack .sidebar box > box.horizontal button.suggested-action:backdrop:not(:disabled), .emoji-picker stack .sidebar box > box.horizontal .linked button.suggested-action:backdrop:not(:disabled), .linked tab button.suggested-action.tab-close-button:backdrop:not(:disabled), tab .linked button.suggested-action.tab-close-button:backdrop:not(:disabled),
+  .linked tab button.suggested-action.tab-indicator:backdrop:not(:disabled),
+  tab .linked button.suggested-action.tab-indicator:backdrop:not(:disabled), .linked button.image-button.suggested-action:backdrop:not(:disabled), button.circular.image-button.suggested-action:backdrop:not(:disabled), button.model.image-button.suggested-action:backdrop:not(:disabled), button.raised.image-button.suggested-action:backdrop:not(:disabled), button.suggested-action:backdrop:not(:disabled), button.flat:backdrop:focus, .sidebar .inline-toolbar button:backdrop:focus, .sidebar actionbar.flat button:backdrop:focus,
+  .sidebar .bottom-toolbar.flat button:backdrop:focus,
+  .sidebar tab .bottom-toolbar.tab-close-button button:backdrop:focus,
+  tab .sidebar .bottom-toolbar.tab-close-button button:backdrop:focus,
+  .sidebar tab .bottom-toolbar.tab-indicator button:backdrop:focus,
+  tab .sidebar .bottom-toolbar.tab-indicator button:backdrop:focus, .sidebar .emoji-picker stack box > box.horizontal button:backdrop:focus, .emoji-picker stack .sidebar box > box.horizontal button:backdrop:focus, tab button.tab-close-button:backdrop:focus,
+  tab button.tab-indicator:backdrop:focus, button.image-button:backdrop:not(.text-button):focus, .badge.flat:backdrop, .sidebar .inline-toolbar button.badge:backdrop, .sidebar actionbar.flat button.badge:backdrop,
+  .sidebar .bottom-toolbar.flat button.badge:backdrop,
+  .sidebar tab .bottom-toolbar.tab-close-button button.badge:backdrop,
+  tab .sidebar .bottom-toolbar.tab-close-button button.badge:backdrop,
+  .sidebar tab .bottom-toolbar.tab-indicator button.badge:backdrop,
+  tab .sidebar .bottom-toolbar.tab-indicator button.badge:backdrop, .sidebar .emoji-picker stack box > box.horizontal button.badge:backdrop, .emoji-picker stack .sidebar box > box.horizontal button.badge:backdrop, tab .badge.tab-close-button:backdrop,
+  tab .badge.tab-indicator:backdrop {
+    background-color: @theme_unfocused_selected_bg_color;
+    color: @theme_unfocused_selected_fg_color; }
+
+.checkerboard {
+  background-color: #f1f1f1;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)), linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
+  background-size: 2.000000001rem 2.000000001rem;
+  background-position: 0 0, 1.000000001rem 1.000000001rem; }
+
+.circular {
+  border-radius: 9999px;
+  -gtk-outline-radius: 9999px; }
+
+.error {
+  color: @error_color; }
+
+.success {
+  color: @success_color; }
+
+.warning {
+  color: @warning_color; }
+
+.avatar,
+avatar {
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+avatar {
+  background-color: @accent_color_300;
+  border-color: alpha(@accent_color_500, 0.5);
+  color: @accent_color_900; }
+  avatar.color1 {
+    background-color: #64baff;
+    border-color: rgba(54, 137, 230, 0.5);
+    color: #002e99; }
+  avatar.color2 {
+    background-color: #8cd5ff;
+    border-color: rgba(100, 186, 255, 0.5);
+    color: #0d52bf; }
+  avatar.color3 {
+    background-color: #43d6b5;
+    border-color: rgba(40, 188, 163, 0.5);
+    color: #007367; }
+  avatar.color4 {
+    background-color: #9bdb4d;
+    border-color: rgba(104, 183, 35, 0.5);
+    color: #206b00; }
+  avatar.color5 {
+    background-color: #f9c440;
+    border-color: rgba(212, 142, 21, 0.5);
+    color: #ad5f00; }
+  avatar.color6 {
+    background-color: #fcb34a;
+    border-color: rgba(228, 129, 31, 0.5);
+    color: #aa4000; }
+  avatar.color7 {
+    background-color: #ffa154;
+    border-color: rgba(243, 115, 41, 0.5);
+    color: #a62100; }
+  avatar.color8 {
+    background-color: #ed5353;
+    border-color: rgba(198, 38, 46, 0.5);
+    color: #7a0000; }
+  avatar.color9 {
+    background-color: #f4679d;
+    border-color: rgba(222, 62, 128, 0.5);
+    color: #910e38; }
+  avatar.color10 {
+    background-color: #cd9ef7;
+    border-color: rgba(165, 109, 226, 0.5);
+    color: #452981; }
+  avatar.color11 {
+    background-color: #6d78db;
+    border-color: rgba(89, 96, 209, 0.5);
+    color: #232c8d; }
+  avatar.color12 {
+    background-color: #d1c288;
+    border-color: rgba(181, 140, 66, 0.5);
+    color: #895818; }
+  avatar.color13 {
+    background-color: #8a715e;
+    border-color: rgba(113, 83, 68, 0.5);
+    color: #3d211b; }
+  avatar.color14 {
+    background-color: #667885;
+    border-color: rgba(72, 90, 108, 0.5);
+    color: #0e141f; }
+  avatar.image {
+    border-color: rgba(0, 0, 0, 0.2);
+    background: none; }
+
+.badge {
+  background-image: linear-gradient(to bottom, #ed5353, #c6262e);
+  border: 1px solid #a10705;
+  border-radius: 99px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 rgba(255, 255, 255, 0.25), inset 0 -1px 0 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-weight: 700;
+  min-height: 1.8333333343rem;
+  min-width: 1.8333333343rem;
+  text-shadow: 0 1px 1px #7a0000; }
+  .badge.flat, .sidebar .inline-toolbar button.badge, .sidebar actionbar.flat button.badge,
+  .sidebar .bottom-toolbar.flat button.badge,
+  .sidebar tab .bottom-toolbar.tab-close-button button.badge,
+  tab .sidebar .bottom-toolbar.tab-close-button button.badge,
+  .sidebar tab .bottom-toolbar.tab-indicator button.badge,
+  tab .sidebar .bottom-toolbar.tab-indicator button.badge, .sidebar .emoji-picker stack box > box.horizontal button.badge, .emoji-picker stack .sidebar box > box.horizontal button.badge, tab .badge.tab-close-button,
+  tab .badge.tab-indicator, .sidebar .badge, .badge.sidebar.view.cell {
+    background-image: none;
+    border-width: 0;
+    box-shadow: none;
+    margin: 0 3px;
+    padding: 0 0.500000001rem;
+    text-shadow: none; }
+  .sidebar .badge, .badge.sidebar.view.cell {
+    background-color: alpha(@text_color, 0.1);
+    color: alpha(@text_color, 0.7); }
+  .badge.flat, .sidebar .inline-toolbar button.badge, .sidebar actionbar.flat button.badge,
+  .sidebar .bottom-toolbar.flat button.badge,
+  .sidebar tab .bottom-toolbar.tab-close-button button.badge,
+  tab .sidebar .bottom-toolbar.tab-close-button button.badge,
+  .sidebar tab .bottom-toolbar.tab-indicator button.badge,
+  tab .sidebar .bottom-toolbar.tab-indicator button.badge, .sidebar .emoji-picker stack box > box.horizontal button.badge, .emoji-picker stack .sidebar box > box.horizontal button.badge, tab .badge.tab-close-button,
+  tab .badge.tab-indicator {
+    min-height: 0;
+    min-width: 1.3333333343rem; }
+    row:selected:not(:focus) .badge.flat, row:selected:not(:focus) .sidebar .inline-toolbar button.badge, row:selected:not(:focus) .sidebar actionbar.flat button.badge,
+    row:selected:not(:focus) .sidebar .bottom-toolbar.flat button.badge,
+    row:selected:not(:focus) .sidebar tab .bottom-toolbar.tab-close-button button.badge,
+    tab row:selected:not(:focus) .sidebar .bottom-toolbar.tab-close-button button.badge,
+    row:selected:not(:focus) .sidebar tab .bottom-toolbar.tab-indicator button.badge,
+    tab row:selected:not(:focus) .sidebar .bottom-toolbar.tab-indicator button.badge,
+    .emoji-picker stack row:selected:not(:focus) .sidebar box > box.horizontal button.bottom-toolbar button.badge, .sidebar .inline-toolbar row:selected:not(:focus) button.badge, .sidebar actionbar.flat row:selected:not(:focus) button.badge,
+    .sidebar .bottom-toolbar.flat row:selected:not(:focus) button.badge,
+    .sidebar tab .bottom-toolbar.tab-close-button row:selected:not(:focus) button.badge,
+    tab .sidebar .bottom-toolbar.tab-close-button row:selected:not(:focus) button.badge,
+    .sidebar tab .bottom-toolbar.tab-indicator row:selected:not(:focus) button.badge,
+    tab .sidebar .bottom-toolbar.tab-indicator row:selected:not(:focus) button.badge, row:selected:not(:focus) .sidebar .emoji-picker stack box > box.horizontal button.badge, .sidebar .emoji-picker stack box > box.horizontal row:selected:not(:focus) button.badge, row:selected:not(:focus) .emoji-picker stack .sidebar box > box.horizontal button.badge, .emoji-picker stack .sidebar box > box.horizontal row:selected:not(:focus) button.badge, row:selected:not(:focus) tab .badge.tab-close-button, tab row:selected:not(:focus) .badge.tab-close-button,
+    row:selected:not(:focus) tab .badge.tab-indicator,
+    tab row:selected:not(:focus) .badge.tab-indicator {
+      color: inherit;
+      background: rgba(51, 51, 51, 0.15); }
+
+button {
+  background-clip: padding-box;
+  border-radius: 0.250000001rem;
+  -gtk-outline-radius: 0.4166666677rem;
+  color: @fg_color;
+  padding: 0.3333333343rem 0.5833333343rem;
+  transition: background 100ms cubic-bezier(0.4, 0, 0.2, 1); }
+  button.flat, .sidebar .inline-toolbar button, .sidebar actionbar.flat button,
+  .sidebar .bottom-toolbar.flat button,
+  .sidebar tab .bottom-toolbar.tab-close-button button,
+  tab .sidebar .bottom-toolbar.tab-close-button button,
+  .sidebar tab .bottom-toolbar.tab-indicator button,
+  tab .sidebar .bottom-toolbar.tab-indicator button, .sidebar .emoji-picker stack box > box.horizontal button, .emoji-picker stack .sidebar box > box.horizontal button, tab button.tab-close-button,
+  tab button.tab-indicator, button.image-button:not(.text-button) {
+    background: none;
+    border: none;
+    box-shadow: none; }
+    button.flat:checked, .sidebar .inline-toolbar button:checked, .sidebar actionbar.flat button:checked,
+    .sidebar .bottom-toolbar.flat button:checked,
+    .sidebar tab .bottom-toolbar.tab-close-button button:checked,
+    tab .sidebar .bottom-toolbar.tab-close-button button:checked,
+    .sidebar tab .bottom-toolbar.tab-indicator button:checked,
+    tab .sidebar .bottom-toolbar.tab-indicator button:checked, .sidebar .emoji-picker stack box > box.horizontal button:checked, .emoji-picker stack .sidebar box > box.horizontal button:checked, tab button.tab-close-button:checked,
+    tab button.tab-indicator:checked, button.image-button:not(.text-button):checked {
+      background: rgba(51, 51, 51, 0.15); }
+    button.flat:focus, .sidebar .inline-toolbar button:focus, .sidebar actionbar.flat button:focus,
+    .sidebar .bottom-toolbar.flat button:focus,
+    .sidebar tab .bottom-toolbar.tab-close-button button:focus,
+    tab .sidebar .bottom-toolbar.tab-close-button button:focus,
+    .sidebar tab .bottom-toolbar.tab-indicator button:focus,
+    tab .sidebar .bottom-toolbar.tab-indicator button:focus, .sidebar .emoji-picker stack box > box.horizontal button:focus, .emoji-picker stack .sidebar box > box.horizontal button:focus, tab button.tab-close-button:focus,
+    tab button.tab-indicator:focus, button.image-button:not(.text-button):focus {
+      outline-style: none; }
+    headerbar button.flat, headerbar .sidebar .inline-toolbar button, headerbar .sidebar actionbar.flat button,
+    headerbar .sidebar .bottom-toolbar.flat button,
+    headerbar .sidebar tab .bottom-toolbar.tab-close-button button,
+    tab headerbar .sidebar .bottom-toolbar.tab-close-button button,
+    headerbar .sidebar tab .bottom-toolbar.tab-indicator button,
+    tab headerbar .sidebar .bottom-toolbar.tab-indicator button,
+    .emoji-picker stack headerbar .sidebar box > box.horizontal button.bottom-toolbar button, .sidebar .inline-toolbar headerbar button, .sidebar actionbar.flat headerbar button,
+    .sidebar .bottom-toolbar.flat headerbar button,
+    .sidebar tab .bottom-toolbar.tab-close-button headerbar button,
+    tab .sidebar .bottom-toolbar.tab-close-button headerbar button,
+    .sidebar tab .bottom-toolbar.tab-indicator headerbar button,
+    tab .sidebar .bottom-toolbar.tab-indicator headerbar button, headerbar .sidebar .emoji-picker stack box > box.horizontal button, .sidebar .emoji-picker stack box > box.horizontal headerbar button, headerbar .emoji-picker stack .sidebar box > box.horizontal button, .emoji-picker stack .sidebar box > box.horizontal headerbar button, headerbar tab button.tab-close-button, tab headerbar button.tab-close-button,
+    headerbar tab button.tab-indicator,
+    tab headerbar button.tab-indicator, headerbar button.image-button:not(.text-button) {
+      border-radius: 99px; }
+  .linked button.flat, .linked .sidebar .inline-toolbar button, .linked .sidebar actionbar.flat button,
+  .linked .sidebar .bottom-toolbar.flat button,
+  .linked .sidebar tab .bottom-toolbar.tab-close-button button,
+  tab .linked .sidebar .bottom-toolbar.tab-close-button button,
+  .linked .sidebar tab .bottom-toolbar.tab-indicator button,
+  tab .linked .sidebar .bottom-toolbar.tab-indicator button,
+  .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button, .sidebar .inline-toolbar .linked button, .sidebar actionbar.flat .linked button,
+  .sidebar .bottom-toolbar.flat .linked button,
+  .sidebar tab .bottom-toolbar.tab-close-button .linked button,
+  tab .sidebar .bottom-toolbar.tab-close-button .linked button,
+  .sidebar tab .bottom-toolbar.tab-indicator .linked button,
+  tab .sidebar .bottom-toolbar.tab-indicator .linked button, .linked .sidebar .emoji-picker stack box > box.horizontal button, .sidebar .emoji-picker stack box > box.horizontal .linked button, .linked .emoji-picker stack .sidebar box > box.horizontal button, .emoji-picker stack .sidebar box > box.horizontal .linked button, .linked tab button.tab-close-button, tab .linked button.tab-close-button,
+  .linked tab button.tab-indicator,
+  tab .linked button.tab-indicator, .linked button.image-button, .linked button.image-button:not(.text-button), button.circular.image-button, button.model.image-button, button.raised.image-button, button {
+    background-clip: padding-box;
+    background-color: #fafafa;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 1px 1px rgba(0, 0, 0, 0.07), 0 1px 2px rgba(0, 0, 0, 0.08); }
+    .linked button.flat.destructive-action:not(:disabled), .linked .sidebar .emoji-picker stack box > box.horizontal button.destructive-action:not(:disabled), .sidebar .emoji-picker stack box > box.horizontal .linked button.destructive-action:not(:disabled), .linked .emoji-picker stack .sidebar box > box.horizontal button.destructive-action:not(:disabled), .emoji-picker stack .sidebar box > box.horizontal .linked button.destructive-action:not(:disabled), .linked button.image-button.destructive-action:not(:disabled), .linked button.image-button:not(.text-button).destructive-action:not(:disabled), button.circular.image-button.destructive-action:not(:disabled), button.model.image-button.destructive-action:not(:disabled), button.raised.image-button.destructive-action:not(:disabled), button.destructive-action:not(:disabled) {
+      background-color: #c6262e;
+      color: white;
+      text-shadow: 0 1px 1px #c6262e;
+      -gtk-icon-shadow: 0 1px 1px #c6262e; }
+      .linked button.flat.destructive-action:not(:disabled), .linked .sidebar .emoji-picker stack box > box.horizontal button.destructive-action:not(:disabled), .sidebar .emoji-picker stack box > box.horizontal .linked button.destructive-action:not(:disabled), .linked .emoji-picker stack .sidebar box > box.horizontal button.destructive-action:not(:disabled), .emoji-picker stack .sidebar box > box.horizontal .linked button.destructive-action:not(:disabled), .linked button.flat.destructive-action:not(:disabled):focus, .linked button.image-button.destructive-action:not(:disabled), .linked button.image-button.destructive-action:not(:disabled):focus, .linked button.image-button:not(.text-button).destructive-action:not(:disabled), .linked button.image-button:not(.text-button).destructive-action:not(:disabled):focus, button.circular.image-button.destructive-action:not(:disabled), button.circular.image-button.destructive-action:not(:disabled):focus, button.model.image-button.destructive-action:not(:disabled), button.model.image-button.destructive-action:not(:disabled):focus, button.raised.image-button.destructive-action:not(:disabled), button.raised.image-button.destructive-action:not(:disabled):focus, button.destructive-action:not(:disabled), button.destructive-action:not(:disabled):focus {
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.2); }
+      .linked button.flat.destructive-action:not(:disabled):focus, .linked button.image-button.destructive-action:not(:disabled):focus, .linked button.image-button:not(.text-button).destructive-action:not(:disabled):focus, button.circular.image-button.destructive-action:not(:disabled):focus, button.model.image-button.destructive-action:not(:disabled):focus, button.raised.image-button.destructive-action:not(:disabled):focus, button.destructive-action:not(:disabled):focus {
+        outline-color: rgba(237, 83, 83, 0.5); }
+    .linked button.flat.suggested-action:not(:disabled), .linked .sidebar .inline-toolbar button.suggested-action:not(:disabled), .linked .sidebar actionbar.flat button.suggested-action:not(:disabled),
+    .linked .sidebar .bottom-toolbar.flat button.suggested-action:not(:disabled),
+    .linked .sidebar tab .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled),
+    tab .linked .sidebar .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled),
+    .linked .sidebar tab .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled),
+    tab .linked .sidebar .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled),
+    .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button.suggested-action:not(:disabled), .sidebar .inline-toolbar .linked button.suggested-action:not(:disabled), .sidebar actionbar.flat .linked button.suggested-action:not(:disabled),
+    .sidebar .bottom-toolbar.flat .linked button.suggested-action:not(:disabled),
+    .sidebar tab .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled),
+    tab .sidebar .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled),
+    .sidebar tab .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled),
+    tab .sidebar .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled), .linked .sidebar .emoji-picker stack box > box.horizontal button.suggested-action:not(:disabled), .sidebar .emoji-picker stack box > box.horizontal .linked button.suggested-action:not(:disabled), .linked .emoji-picker stack .sidebar box > box.horizontal button.suggested-action:not(:disabled), .emoji-picker stack .sidebar box > box.horizontal .linked button.suggested-action:not(:disabled), .linked tab button.suggested-action.tab-close-button:not(:disabled), tab .linked button.suggested-action.tab-close-button:not(:disabled),
+    .linked tab button.suggested-action.tab-indicator:not(:disabled),
+    tab .linked button.suggested-action.tab-indicator:not(:disabled), .linked button.image-button.suggested-action:not(:disabled), .linked button.image-button:not(.text-button).suggested-action:not(:disabled), button.circular.image-button.suggested-action:not(:disabled), button.model.image-button.suggested-action:not(:disabled), button.raised.image-button.suggested-action:not(:disabled), button.suggested-action:not(:disabled) {
+      border-color: alpha (mix (black, @accent_color, 0.9), 0.5); }
+      .linked button.flat.suggested-action:not(:disabled):backdrop, .linked .sidebar .inline-toolbar button.suggested-action:not(:disabled):backdrop, .linked .sidebar actionbar.flat button.suggested-action:not(:disabled):backdrop,
+      .linked .sidebar .bottom-toolbar.flat button.suggested-action:not(:disabled):backdrop,
+      .linked .sidebar tab .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled):backdrop,
+      tab .linked .sidebar .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled):backdrop,
+      .linked .sidebar tab .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled):backdrop,
+      tab .linked .sidebar .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled):backdrop,
+      .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button.suggested-action:not(:disabled):backdrop, .sidebar .inline-toolbar .linked button.suggested-action:not(:disabled):backdrop, .sidebar actionbar.flat .linked button.suggested-action:not(:disabled):backdrop,
+      .sidebar .bottom-toolbar.flat .linked button.suggested-action:not(:disabled):backdrop,
+      .sidebar tab .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled):backdrop,
+      tab .sidebar .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled):backdrop,
+      .sidebar tab .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled):backdrop,
+      tab .sidebar .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled):backdrop, .linked .sidebar .emoji-picker stack box > box.horizontal button.suggested-action:not(:disabled):backdrop, .sidebar .emoji-picker stack box > box.horizontal .linked button.suggested-action:not(:disabled):backdrop, .linked .emoji-picker stack .sidebar box > box.horizontal button.suggested-action:not(:disabled):backdrop, .emoji-picker stack .sidebar box > box.horizontal .linked button.suggested-action:not(:disabled):backdrop, .linked tab button.suggested-action.tab-close-button:not(:disabled):backdrop, tab .linked button.suggested-action.tab-close-button:not(:disabled):backdrop,
+      .linked tab button.suggested-action.tab-indicator:not(:disabled):backdrop,
+      tab .linked button.suggested-action.tab-indicator:not(:disabled):backdrop, .linked button.image-button.suggested-action:not(:disabled):backdrop, .linked button.image-button:not(.text-button).suggested-action:not(:disabled):backdrop, button.circular.image-button.suggested-action:not(:disabled):backdrop, button.model.image-button.suggested-action:not(:disabled):backdrop, button.raised.image-button.suggested-action:not(:disabled):backdrop, button.suggested-action:not(:disabled):backdrop {
+        border-color: rgba(0, 0, 0, 0.2); }
+      .linked button.flat.suggested-action:not(:disabled) image, .linked .sidebar .inline-toolbar button.suggested-action:not(:disabled) image, .linked .sidebar actionbar.flat button.suggested-action:not(:disabled) image,
+      .linked .sidebar .bottom-toolbar.flat button.suggested-action:not(:disabled) image,
+      .linked .sidebar tab .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled) image,
+      tab .linked .sidebar .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled) image,
+      .linked .sidebar tab .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled) image,
+      tab .linked .sidebar .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled) image,
+      .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button.suggested-action:not(:disabled) image, .sidebar .inline-toolbar .linked button.suggested-action:not(:disabled) image, .sidebar actionbar.flat .linked button.suggested-action:not(:disabled) image,
+      .sidebar .bottom-toolbar.flat .linked button.suggested-action:not(:disabled) image,
+      .sidebar tab .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled) image,
+      tab .sidebar .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled) image,
+      .sidebar tab .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled) image,
+      tab .sidebar .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled) image, .linked .sidebar .emoji-picker stack box > box.horizontal button.suggested-action:not(:disabled) image, .sidebar .emoji-picker stack box > box.horizontal .linked button.suggested-action:not(:disabled) image, .linked .emoji-picker stack .sidebar box > box.horizontal button.suggested-action:not(:disabled) image, .emoji-picker stack .sidebar box > box.horizontal .linked button.suggested-action:not(:disabled) image, .linked tab button.suggested-action.tab-close-button:not(:disabled) image, tab .linked button.suggested-action.tab-close-button:not(:disabled) image,
+      .linked tab button.suggested-action.tab-indicator:not(:disabled) image,
+      tab .linked button.suggested-action.tab-indicator:not(:disabled) image,
+      .linked button.flat.suggested-action:not(:disabled) label,
+      .linked .sidebar .inline-toolbar button.suggested-action:not(:disabled) label,
+      .linked .sidebar actionbar.flat button.suggested-action:not(:disabled) label,
+      .linked .sidebar .bottom-toolbar.flat button.suggested-action:not(:disabled) label,
+      .linked .sidebar tab .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled) label,
+      tab .linked .sidebar .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled) label,
+      .linked .sidebar tab .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled) label,
+      tab .linked .sidebar .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled) label,
+      .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button.suggested-action:not(:disabled) label,
+      .sidebar .inline-toolbar .linked button.suggested-action:not(:disabled) label,
+      .sidebar actionbar.flat .linked button.suggested-action:not(:disabled) label,
+      .sidebar .bottom-toolbar.flat .linked button.suggested-action:not(:disabled) label,
+      .sidebar tab .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled) label,
+      tab .sidebar .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled) label,
+      .sidebar tab .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled) label,
+      tab .sidebar .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled) label,
+      .linked .sidebar .emoji-picker stack box > box.horizontal button.suggested-action:not(:disabled) label,
+      .sidebar .emoji-picker stack box > box.horizontal .linked button.suggested-action:not(:disabled) label,
+      .linked .emoji-picker stack .sidebar box > box.horizontal button.suggested-action:not(:disabled) label,
+      .emoji-picker stack .sidebar box > box.horizontal .linked button.suggested-action:not(:disabled) label,
+      .linked tab button.suggested-action.tab-close-button:not(:disabled) label,
+      tab .linked button.suggested-action.tab-close-button:not(:disabled) label,
+      .linked tab button.suggested-action.tab-indicator:not(:disabled) label,
+      tab .linked button.suggested-action.tab-indicator:not(:disabled) label, .linked button.image-button.suggested-action:not(:disabled) image,
+      .linked button.image-button.suggested-action:not(:disabled) label, .linked button.image-button:not(.text-button).suggested-action:not(:disabled) image,
+      .linked button.image-button:not(.text-button).suggested-action:not(:disabled) label, button.circular.image-button.suggested-action:not(:disabled) image,
+      button.circular.image-button.suggested-action:not(:disabled) label, button.model.image-button.suggested-action:not(:disabled) image,
+      button.model.image-button.suggested-action:not(:disabled) label, button.raised.image-button.suggested-action:not(:disabled) image,
+      button.raised.image-button.suggested-action:not(:disabled) label, button.suggested-action:not(:disabled) image,
+      button.suggested-action:not(:disabled) label {
+        color: inherit; }
+      .linked button.flat.suggested-action:not(:disabled):active, .linked .sidebar .inline-toolbar button.suggested-action:not(:disabled):active, .linked .sidebar actionbar.flat button.suggested-action:not(:disabled):active,
+      .linked .sidebar .bottom-toolbar.flat button.suggested-action:not(:disabled):active,
+      .linked .sidebar tab .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled):active,
+      tab .linked .sidebar .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled):active,
+      .linked .sidebar tab .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled):active,
+      tab .linked .sidebar .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled):active,
+      .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button.suggested-action:not(:disabled):active, .sidebar .inline-toolbar .linked button.suggested-action:not(:disabled):active, .sidebar actionbar.flat .linked button.suggested-action:not(:disabled):active,
+      .sidebar .bottom-toolbar.flat .linked button.suggested-action:not(:disabled):active,
+      .sidebar tab .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled):active,
+      tab .sidebar .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled):active,
+      .sidebar tab .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled):active,
+      tab .sidebar .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled):active, .linked .sidebar .emoji-picker stack box > box.horizontal button.suggested-action:not(:disabled):active, .sidebar .emoji-picker stack box > box.horizontal .linked button.suggested-action:not(:disabled):active, .linked .emoji-picker stack .sidebar box > box.horizontal button.suggested-action:not(:disabled):active, .emoji-picker stack .sidebar box > box.horizontal .linked button.suggested-action:not(:disabled):active, .linked tab button.suggested-action.tab-close-button:not(:disabled):active, tab .linked button.suggested-action.tab-close-button:not(:disabled):active,
+      .linked tab button.suggested-action.tab-indicator:not(:disabled):active,
+      tab .linked button.suggested-action.tab-indicator:not(:disabled):active, .linked button.flat.suggested-action:not(:disabled):checked, .linked .sidebar .inline-toolbar button.suggested-action:not(:disabled):checked, .linked .sidebar actionbar.flat button.suggested-action:not(:disabled):checked,
+      .linked .sidebar .bottom-toolbar.flat button.suggested-action:not(:disabled):checked,
+      .linked .sidebar tab .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled):checked,
+      tab .linked .sidebar .bottom-toolbar.tab-close-button button.suggested-action:not(:disabled):checked,
+      .linked .sidebar tab .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled):checked,
+      tab .linked .sidebar .bottom-toolbar.tab-indicator button.suggested-action:not(:disabled):checked,
+      .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button.suggested-action:not(:disabled):checked, .sidebar .inline-toolbar .linked button.suggested-action:not(:disabled):checked, .sidebar actionbar.flat .linked button.suggested-action:not(:disabled):checked,
+      .sidebar .bottom-toolbar.flat .linked button.suggested-action:not(:disabled):checked,
+      .sidebar tab .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled):checked,
+      tab .sidebar .bottom-toolbar.tab-close-button .linked button.suggested-action:not(:disabled):checked,
+      .sidebar tab .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled):checked,
+      tab .sidebar .bottom-toolbar.tab-indicator .linked button.suggested-action:not(:disabled):checked, .linked .sidebar .emoji-picker stack box > box.horizontal button.suggested-action:not(:disabled):checked, .sidebar .emoji-picker stack box > box.horizontal .linked button.suggested-action:not(:disabled):checked, .linked .emoji-picker stack .sidebar box > box.horizontal button.suggested-action:not(:disabled):checked, .emoji-picker stack .sidebar box > box.horizontal .linked button.suggested-action:not(:disabled):checked, .linked tab button.suggested-action.tab-close-button:not(:disabled):checked, tab .linked button.suggested-action.tab-close-button:not(:disabled):checked,
+      .linked tab button.suggested-action.tab-indicator:not(:disabled):checked,
+      tab .linked button.suggested-action.tab-indicator:not(:disabled):checked, .linked button.image-button.suggested-action:not(:disabled):active, .linked button.image-button.suggested-action:not(:disabled):checked, .linked button.image-button:not(.text-button).suggested-action:not(:disabled):active, .linked button.image-button:not(.text-button).suggested-action:not(:disabled):checked, button.circular.image-button.suggested-action:not(:disabled):active, button.circular.image-button.suggested-action:not(:disabled):checked, button.model.image-button.suggested-action:not(:disabled):active, button.model.image-button.suggested-action:not(:disabled):checked, button.raised.image-button.suggested-action:not(:disabled):active, button.raised.image-button.suggested-action:not(:disabled):checked, button.suggested-action:not(:disabled):active, button.suggested-action:not(:disabled):checked {
+        border-color: alpha (mix (black, @accent_color, 0.7), 0.4); }
+    .linked button.flat.titlebutton:not(:active), .linked .sidebar .emoji-picker stack box > box.horizontal button.titlebutton:not(:active), .sidebar .emoji-picker stack box > box.horizontal .linked button.titlebutton:not(:active), .linked .emoji-picker stack .sidebar box > box.horizontal button.titlebutton:not(:active), .emoji-picker stack .sidebar box > box.horizontal .linked button.titlebutton:not(:active), .linked button.image-button.titlebutton:not(:active), .linked button.image-button:not(.text-button).titlebutton:not(:active), button.circular.image-button.titlebutton:not(:active), button.model.image-button.titlebutton:not(:active), button.raised.image-button.titlebutton:not(:active), button.titlebutton:not(:active) {
+      background: none;
+      border-color: transparent;
+      box-shadow: none; }
+    .linked button.flat:active, .linked .sidebar .inline-toolbar button:active, .linked .sidebar actionbar.flat button:active,
+    .linked .sidebar .bottom-toolbar.flat button:active,
+    .linked .sidebar tab .bottom-toolbar.tab-close-button button:active,
+    tab .linked .sidebar .bottom-toolbar.tab-close-button button:active,
+    .linked .sidebar tab .bottom-toolbar.tab-indicator button:active,
+    tab .linked .sidebar .bottom-toolbar.tab-indicator button:active,
+    .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button:active, .sidebar .inline-toolbar .linked button:active, .sidebar actionbar.flat .linked button:active,
+    .sidebar .bottom-toolbar.flat .linked button:active,
+    .sidebar tab .bottom-toolbar.tab-close-button .linked button:active,
+    tab .sidebar .bottom-toolbar.tab-close-button .linked button:active,
+    .sidebar tab .bottom-toolbar.tab-indicator .linked button:active,
+    tab .sidebar .bottom-toolbar.tab-indicator .linked button:active, .linked .sidebar .emoji-picker stack box > box.horizontal button:active, .sidebar .emoji-picker stack box > box.horizontal .linked button:active, .linked .emoji-picker stack .sidebar box > box.horizontal button:active, .emoji-picker stack .sidebar box > box.horizontal .linked button:active, .linked tab button.tab-close-button:active, tab .linked button.tab-close-button:active,
+    .linked tab button.tab-indicator:active,
+    tab .linked button.tab-indicator:active, .linked button.flat:checked, .linked .sidebar .inline-toolbar button:checked, .linked .sidebar actionbar.flat button:checked,
+    .linked .sidebar .bottom-toolbar.flat button:checked,
+    .linked .sidebar tab .bottom-toolbar.tab-close-button button:checked,
+    tab .linked .sidebar .bottom-toolbar.tab-close-button button:checked,
+    .linked .sidebar tab .bottom-toolbar.tab-indicator button:checked,
+    tab .linked .sidebar .bottom-toolbar.tab-indicator button:checked,
+    .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button:checked, .sidebar .inline-toolbar .linked button:checked, .sidebar actionbar.flat .linked button:checked,
+    .sidebar .bottom-toolbar.flat .linked button:checked,
+    .sidebar tab .bottom-toolbar.tab-close-button .linked button:checked,
+    tab .sidebar .bottom-toolbar.tab-close-button .linked button:checked,
+    .sidebar tab .bottom-toolbar.tab-indicator .linked button:checked,
+    tab .sidebar .bottom-toolbar.tab-indicator .linked button:checked, .linked .sidebar .emoji-picker stack box > box.horizontal button:checked, .sidebar .emoji-picker stack box > box.horizontal .linked button:checked, .linked .emoji-picker stack .sidebar box > box.horizontal button:checked, .emoji-picker stack .sidebar box > box.horizontal .linked button:checked, .linked tab button.tab-close-button:checked, tab .linked button.tab-close-button:checked,
+    .linked tab button.tab-indicator:checked,
+    tab .linked button.tab-indicator:checked, .linked button.image-button:active, .linked button.image-button:checked, .linked button.image-button:not(.text-button):active, .linked button.image-button:not(.text-button):checked, button.circular.image-button:active, button.circular.image-button:checked, button.model.image-button:active, button.model.image-button:checked, button.raised.image-button:active, button.raised.image-button:checked, button:active, button:checked {
+      background: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 1px 0 0 alpha(@highlight_color, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.05), inset 0 0 1px 1px rgba(0, 0, 0, 0.05); }
+    .linked button.flat:disabled, .linked .sidebar .inline-toolbar button:disabled, .linked .sidebar actionbar.flat button:disabled,
+    .linked .sidebar .bottom-toolbar.flat button:disabled,
+    .linked .sidebar tab .bottom-toolbar.tab-close-button button:disabled,
+    tab .linked .sidebar .bottom-toolbar.tab-close-button button:disabled,
+    .linked .sidebar tab .bottom-toolbar.tab-indicator button:disabled,
+    tab .linked .sidebar .bottom-toolbar.tab-indicator button:disabled,
+    .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button:disabled, .sidebar .inline-toolbar .linked button:disabled, .sidebar actionbar.flat .linked button:disabled,
+    .sidebar .bottom-toolbar.flat .linked button:disabled,
+    .sidebar tab .bottom-toolbar.tab-close-button .linked button:disabled,
+    tab .sidebar .bottom-toolbar.tab-close-button .linked button:disabled,
+    .sidebar tab .bottom-toolbar.tab-indicator .linked button:disabled,
+    tab .sidebar .bottom-toolbar.tab-indicator .linked button:disabled, .linked .sidebar .emoji-picker stack box > box.horizontal button:disabled, .sidebar .emoji-picker stack box > box.horizontal .linked button:disabled, .linked .emoji-picker stack .sidebar box > box.horizontal button:disabled, .emoji-picker stack .sidebar box > box.horizontal .linked button:disabled, .linked tab button.tab-close-button:disabled, tab .linked button.tab-close-button:disabled,
+    .linked tab button.tab-indicator:disabled,
+    tab .linked button.tab-indicator:disabled, .linked button.image-button:disabled, .linked button.image-button:not(.text-button):disabled, button.circular.image-button:disabled, button.model.image-button:disabled, button.raised.image-button:disabled, button:disabled {
+      background: rgba(0, 0, 0, 0.03);
+      box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 1px 1px rgba(0, 0, 0, 0.05); }
+    .linked button.flat:focus, .linked .sidebar .inline-toolbar button:focus, .linked .sidebar actionbar.flat button:focus,
+    .linked .sidebar .bottom-toolbar.flat button:focus,
+    .linked .sidebar tab .bottom-toolbar.tab-close-button button:focus,
+    tab .linked .sidebar .bottom-toolbar.tab-close-button button:focus,
+    .linked .sidebar tab .bottom-toolbar.tab-indicator button:focus,
+    tab .linked .sidebar .bottom-toolbar.tab-indicator button:focus,
+    .emoji-picker stack .linked .sidebar box > box.horizontal button.bottom-toolbar button:focus, .sidebar .inline-toolbar .linked button:focus, .sidebar actionbar.flat .linked button:focus,
+    .sidebar .bottom-toolbar.flat .linked button:focus,
+    .sidebar tab .bottom-toolbar.tab-close-button .linked button:focus,
+    tab .sidebar .bottom-toolbar.tab-close-button .linked button:focus,
+    .sidebar tab .bottom-toolbar.tab-indicator .linked button:focus,
+    tab .sidebar .bottom-toolbar.tab-indicator .linked button:focus, .linked .sidebar .emoji-picker stack box > box.horizontal button:focus, .sidebar .emoji-picker stack box > box.horizontal .linked button:focus, .linked .emoji-picker stack .sidebar box > box.horizontal button:focus, .emoji-picker stack .sidebar box > box.horizontal .linked button:focus, .linked tab button.tab-close-button:focus, tab .linked button.tab-close-button:focus,
+    .linked tab button.tab-indicator:focus,
+    tab .linked button.tab-indicator:focus, .linked button.image-button:focus, .linked button.image-button:not(.text-button):focus, button.circular.image-button:focus, button.model.image-button:focus, button.raised.image-button:focus, button:focus {
+      border-color: @accent_color;
+      color: @selected_fg_color;
+      outline-color: alpha(@accent_color, 0.3);
+      outline-width: 0.1666666677rem;
+      outline-style: solid; }
+  button.back-button {
+    background-repeat: no-repeat no-repeat;
+    background-size: 16px, cover; }
+    button.back-button:dir(ltr) {
+      background-image: -gtk-icontheme("go-previous-symbolic"), linear-gradient(to bottom, alpha(@highlight_color, 0.2), rgba(255, 255, 255, 0));
+      padding-left: calc(0.750000001rem + 16px);
+      background-position: 0.500000001rem 50%, center, center; }
+    button.back-button:dir(rtl) {
+      background-image: -gtk-icontheme("go-next-symbolic"), linear-gradient(to bottom, alpha(@highlight_color, 0.2), rgba(255, 255, 255, 0));
+      padding-right: calc(0.750000001rem + 16px);
+      background-position: calc(100% - 0.500000001rem) 50%, center, center; }
+  button:disabled {
+    color: #979797; }
+  button:backdrop {
+    -gtk-icon-effect: dim; }
+  button.color, button.combo, button.image-button, button.titlebutton {
+    padding: 0.3333333343rem; }
+  button.text-button.link {
+    padding: 0; }
+  button.color colorswatch,
+  button.color overlay {
+    border-radius: 0.1666666677rem; }
+  button arrow {
+    min-width: 1.3333333343rem;
+    min-height: 1.3333333343rem;
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+  button label {
+    font-weight: 500; }
+  button:dir(ltr) image + label, button:dir(rtl) label + image {
+    margin-left: 0.250000001rem; }
+
+calendar {
+  padding: 0.0833333343rem; }
+  calendar .view {
+    background-color: transparent;
+    background-image: none; }
+  calendar .highlight {
+    color: #5c5c5c; }
+  calendar:selected {
+    border-radius: 99px; }
+  calendar:indeterminate {
+    color: #999999; }
+
+.deck {
+  background-color: #f1f1f1; }
+
+.card {
+  background-color: white;
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px rgba(0, 0, 0, 0.1), 0 3px 4px rgba(0, 0, 0, 0.15), 0 3px 3px -3px rgba(0, 0, 0, 0.35);
+  transition: background 100ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+  .card.collapsed {
+    background-color: #fafafa;
+    box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: background 100ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); }
+  .card.rounded {
+    border-radius: 0.250000001rem; }
+
+check,
+radio {
+  background-color: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 1px 1px rgba(0, 0, 0, 0.05);
+  min-height: 1.000000001rem;
+  min-width: 1.000000001rem;
+  transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
+  -gtk-icon-source: none; }
+  check:checked,
+  radio:checked {
+    background-color: @accent_color;
+    color: white;
+    -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
+    -gtk-icon-shadow: 0 1px 1px shade(@accent_color, 0.7); }
+    check:checked:backdrop:not(:disabled):not(.colorbutton),
+    radio:checked:backdrop:not(:disabled):not(.colorbutton) {
+      background-image: none;
+      background-color: #dfdfdf;
+      -gtk-icon-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+  check:disabled,
+  radio:disabled {
+    background: rgba(0, 0, 0, 0.03);
+    box-shadow: 0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+    color: #979797;
+    -gtk-icon-shadow: 0 1px 1px alpha (@bg_highlight_color, 0.3); }
+  check:indeterminate,
+  radio:indeterminate {
+    -gtk-icon-source: -gtk-icontheme("check-mixed-symbolic"); }
+  check:focus,
+  radio:focus {
+    box-shadow: 0 0 0 2px alpha(@accent_color, 0.3), inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 1px 1px rgba(0, 0, 0, 0.05); }
+    check:focus:not(:checked),
+    radio:focus:not(:checked) {
+      border-color: @accent_color; }
+
+check {
+  border-radius: 0.250000001rem; }
+
+radio {
+  border-radius: 50%; }
+
+radiobutton image:dir(ltr),
+radiobutton label:dir(ltr),
+checkbutton image:dir(ltr),
+checkbutton label:dir(ltr) {
+  margin-left: 0.500000001rem; }
+
+radiobutton image:dir(rtl),
+radiobutton label:dir(rtl),
+checkbutton image:dir(rtl),
+checkbutton label:dir(rtl) {
+  margin-right: 0.500000001rem; }
+
+radiobutton.image-button,
+checkbutton.image-button {
+  border: 1px solid transparent; }
+
+radiobutton.image-button:checked,
+checkbutton.image-button:checked {
+  background: alpha(@selected_bg_color, 0.4);
+  border-color: @selected_bg_color;
+  border-radius: 0.250000001rem;
+  color: @selected_fg_color; }
+  radiobutton.image-button:checked:backdrop,
+  checkbutton.image-button:checked:backdrop {
+    background: rgba(51, 51, 51, 0.05);
+    border-color: rgba(51, 51, 51, 0.25);
+    color: inherit; }
+
+radiobutton.image-button {
+  padding: 0.500000001rem; }
+  radiobutton.image-button:checked:not(:backdrop) image {
+    color: @selected_fg_color; }
+
+.color-button check,
+.color-button check:checked,
+.color-button radio,
+.color-button radio:checked {
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 1px 0 0 alpha(@highlight_color, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.05), inset 0 0 1px 1px rgba(0, 0, 0, 0.05);
+  min-height: 1.000000001rem;
+  min-width: 1.000000001rem;
+  padding: 0.250000001rem; }
+
+.color-button.red check, .color-button.red radio, .color-button.strawberry check, .color-button.strawberry radio {
+  background-color: @STRAWBERRY_300;
+  -gtk-icon-shadow: 0 1px 1px @STRAWBERRY_500; }
+
+.color-button.orange check, .color-button.orange radio {
+  background-color: @ORANGE_300;
+  -gtk-icon-shadow: 0 1px 1px @ORANGE_500; }
+
+.color-button.yellow check, .color-button.yellow radio, .color-button.banana check, .color-button.banana radio {
+  background-color: @BANANA_500;
+  -gtk-icon-shadow: 0 1px 1px @BANANA_700; }
+
+.color-button.green check, .color-button.green radio, .color-button.lime check, .color-button.lime radio {
+  background-color: @LIME_500;
+  -gtk-icon-shadow: 0 1px 1px @LIME_700; }
+
+.color-button.blue check, .color-button.blue radio, .color-button.blueberry check, .color-button.blueberry radio {
+  background-color: @BLUEBERRY_500;
+  -gtk-icon-shadow: 0 1px 1px @BLUEBERRY_700; }
+
+.color-button.purple check, .color-button.purple radio, .color-button.grape check, .color-button.grape radio {
+  background-color: @GRAPE_500;
+  -gtk-icon-shadow: 0 1px 1px @GRAPE_700; }
+
+.color-button.brown check, .color-button.brown radio, .color-button.cocoa check, .color-button.cocoa radio {
+  background-color: @COCOA_300;
+  -gtk-icon-shadow: 0 1px 1px @COCOA_500; }
+
+.color-button.mint check, .color-button.mint radio {
+  background-color: @MINT_500;
+  -gtk-icon-shadow: 0 1px 1px @MINT_700; }
+
+.color-button.pink check, .color-button.pink radio, .color-button.bubblegum check, .color-button.bubblegum radio {
+  background-color: @BUBBLEGUM_500;
+  -gtk-icon-shadow: 0 1px 1px @BUBBLEGUM_700; }
+
+.color-button.slate check, .color-button.slate radio {
+  background-color: @SLATE_300;
+  -gtk-icon-shadow: 0 1px 1px @SLATE_500; }
+
+.color-button.auto radio {
+  background-image: url("assets/color-button-auto.png");
+  background-position: -1px -1px;
+  background-repeat: no-repeat;
+  background-size: calc(100% + 2px); }
+
+colorchooser {
+  /* This is 1px larger in the dark style because it's outside the swatch
+     * instead of on top */
+  /*Value and Custom shades*/ }
+  colorchooser colorswatch {
+    margin: -1px 3px; }
+    colorchooser colorswatch.top {
+      border-top-width: 1px;
+      border-top-left-radius: 0.250000001rem;
+      border-top-right-radius: 0.250000001rem; }
+      colorchooser colorswatch.top overlay {
+        border-top-width: 1px;
+        border-top-left-radius: 0.250000001rem;
+        border-top-right-radius: 0.250000001rem; }
+    colorchooser colorswatch.bottom {
+      border-bottom-width: 1px;
+      border-bottom-left-radius: 0.250000001rem;
+      border-bottom-right-radius: 0.250000001rem; }
+      colorchooser colorswatch.bottom overlay {
+        border-bottom-width: 1px;
+        border-bottom-left-radius: 0.250000001rem;
+        border-bottom-right-radius: 0.250000001rem; }
+    colorchooser colorswatch overlay {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom-width: 0;
+      border-top-width: 0;
+      margin: -1px 3px; }
+    colorchooser colorswatch.dark overlay {
+      color: white;
+      -gtk-icon-shadow: 0 0.0833333343rem 0.1666666677rem rgba(0, 0, 0, 0.3); }
+    colorchooser colorswatch.light overlay {
+      color: rgba(0, 0, 0, 0.6);
+      -gtk-icon-shadow: 0 0.0833333343rem 0.0833333343rem rgba(255, 255, 255, 0.2); }
+  colorchooser grid:nth-child(2) colorswatch,
+  colorchooser box box colorswatch {
+    border-radius: 0.250000001rem; }
+    colorchooser grid:nth-child(2) colorswatch overlay,
+    colorchooser box box colorswatch overlay {
+      border-radius: 0.250000001rem;
+      border-width: 1px; }
+
+.emoji-picker entry {
+  margin: 1.000000001rem;
+  margin-bottom: 0.250000001rem; }
+
+.emoji-picker box.vertical > label {
+  margin-left: 0.5833333343rem;
+  margin-right: 0.5833333343rem; }
+
+.emoji-picker .emoji {
+  min-height: 36px;
+  min-width: 36px;
+  font-size: 16px; }
+
+.emoji-picker stack box > box.horizontal {
+  border-radius: 0 0 0.500000001rem 0.500000001rem; }
+
+.emoji-picker .emoji-section {
+  border-radius: 0;
+  box-shadow: none;
+  min-height: 24px;
+  min-width: 24px;
+  opacity: 0.6; }
+  .emoji-picker .emoji-section:checked {
+    opacity: 1; }
+  .emoji-picker .emoji-section:hover {
+    opacity: 0.8; }
+  .emoji-picker .emoji-section:first-child {
+    border-bottom-left-radius: 0.500000001rem; }
+  .emoji-picker .emoji-section:last-child {
+    border-bottom-right-radius: 0.500000001rem; }
+
+spinbutton, entry {
+  background-color: white;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.250000001rem;
+  box-shadow: 0 1px 0 0 alpha(@highlight_color, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.05), inset 0 0 1px 1px rgba(0, 0, 0, 0.05);
+  color: @fg_color; }
+  spinbutton:disabled, entry:disabled {
+    background: rgba(0, 0, 0, 0.03);
+    box-shadow: 0 1px 0 0 alpha(@highlight_color, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    color: #979797; }
+  spinbutton.flat, tab spinbutton.tab-close-button,
+  tab spinbutton.tab-indicator, entry.flat, tab entry.tab-close-button,
+  tab entry.tab-indicator {
+    background: transparent;
+    border-color: transparent;
+    border-radius: 0;
+    box-shadow: none; }
+    spinbutton.flat:focus, tab spinbutton.tab-close-button:focus,
+    tab spinbutton.tab-indicator:focus, entry.flat:focus, tab entry.tab-close-button:focus,
+    tab entry.tab-indicator:focus {
+      border-bottom-color: @accent_color; }
+  spinbutton:focus, entry:focus {
+    border-color: @accent_color;
+    box-shadow: 0 0 0 0.1666666677rem alpha(@accent_color, 0.3), 0 1px 0 0 alpha(@highlight_color, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.05), inset 0 0 1px 1px rgba(0, 0, 0, 0.05); }
+
+entry {
+  min-height: 16px;
+  padding: 0.3333333343rem; }
+  entry image {
+    color: @placeholder_text_color;
+    transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1); }
+  entry image.left {
+    margin-right: 0.500000001rem; }
+  entry image.right {
+    margin-left: 0.500000001rem; }
+  entry:dir(ltr) image.right:hover, entry:dir(rtl) image.left:hover {
+    color: #333; }
+  headerbar entry {
+    margin: 1px; }
+
+expander arrow,
+.expander,
+.category-expander {
+  min-height: 16px;
+  min-width: 16px;
+  transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+  expander arrow:dir(rtl),
+  .expander:dir(rtl),
+  .category-expander:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
+  expander arrow:checked,
+  .expander:checked,
+  .category-expander:checked {
+    -gtk-icon-transform: rotate(90deg); }
+    expander arrow:checked:dir(rtl),
+    .expander:checked:dir(rtl),
+    .category-expander:checked:dir(rtl) {
+      -gtk-icon-transform: rotate(-90deg); }
+
+.sidebar.category-expander,
+.source-list.category-expander {
+  color: transparent;
+  border: none; }
+  .sidebar.category-expander:hover,
+  .source-list.category-expander:hover {
+    color: inherit; }
+
+image {
+  -gtk-icon-palette: error @error_color, success @success_color, warning #e7a92b; }
+  image:disabled {
+    -gtk-icon-effect: dim; }
+
+infobar revealer > box {
+  background-color: #f1f1f1;
+  background-image: -gtk-icontheme("dialog-information-symbolic");
+  background-size: 16px;
+  background-repeat: no-repeat;
+  border-color: #dfdfdf;
+  border-style: solid;
+  border-width: 0 0 1px;
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07); }
+  infobar revealer > box:dir(ltr) {
+    background-position: 0.750000001rem center;
+    padding-left: 2.000000001rem; }
+  infobar revealer > box:dir(rtl) {
+    background-position: calc(100% - 0.750000001rem) center;
+    padding-right: 2.000000001rem; }
+
+infobar.error revealer > box {
+  background-color: #ed5353;
+  background-image: -gtk-icontheme("process-error-symbolic");
+  border-color: #c6262e;
+  color: black;
+  -gtk-icon-palette: error #4D0000; }
+
+infobar.warning revealer > box {
+  background-color: #ffe16b;
+  background-image: -gtk-icontheme("dialog-warning-symbolic");
+  border-color: #f9c440;
+  color: #963000;
+  -gtk-icon-palette: warning #963000; }
+
+infobar.question revealer > box {
+  background-color: #64baff;
+  background-image: -gtk-icontheme("dialog-question-symbolic");
+  border-color: #3689e6;
+  color: #002B82; }
+
+infobar.frame {
+  border: none; }
+  infobar.frame revealer > box {
+    border-width: 1px;
+    border-radius: 0.250000001rem;
+    box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 1px 1px rgba(0, 0, 0, 0.07), 0 1px 2px rgba(0, 0, 0, 0.08);
+    margin: 0.250000001rem; }
+
+levelbar block {
+  background-color: @accent_color_300;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.500000001rem;
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 1px 1px rgba(0, 0, 0, 0.05);
+  transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1); }
+  levelbar block.filled.low {
+    background-color: #c6262e; }
+  levelbar block.filled.middle {
+    background-color: #f9c440; }
+  levelbar block.filled.high {
+    background-color: #64baff; }
+  levelbar block.filled.full {
+    background-color: #9bdb4d; }
+  levelbar block.filled:backdrop {
+    background-color: #dfdfdf; }
+  levelbar block.empty {
+    background-color: #fafafa; }
+
+levelbar.discrete.horizontal block {
+  min-width: 2.000000001rem; }
+  levelbar.discrete.horizontal block:not(:first-child) {
+    margin-left: 0.250000001rem; }
+
+levelbar.discrete.vertical block {
+  margin: 2px 0;
+  min-height: 2.000000001rem; }
+
+levelbar.inverted block.filled.low {
+  background-color: #9bdb4d; }
+
+levelbar.inverted block.filled.middle {
+  background-color: #64baff; }
+
+levelbar.inverted block.filled.high {
+  background-color: #f9c440; }
+
+levelbar.inverted block.filled.full {
+  background-color: #c6262e; }
+
+levelbar.horizontal block {
+  min-height: 0.500000001rem;
+  min-width: 0.250000001rem; }
+
+levelbar.vertical block {
+  min-height: 0.250000001rem;
+  min-width: 0.500000001rem; }
+
+levelbar.flat block, tab levelbar.tab-close-button block,
+tab levelbar.tab-indicator block {
+  border: none;
+  box-shadow: none; }
+  levelbar.flat block.empty, tab levelbar.tab-close-button block.empty,
+  tab levelbar.tab-indicator block.empty {
+    background: rgba(51, 51, 51, 0.2); }
+  levelbar.flat block.filled.low:not(:backdrop), tab levelbar.tab-close-button block.filled.low:not(:backdrop),
+  tab levelbar.tab-indicator block.filled.low:not(:backdrop) {
+    background: #c6262e; }
+    levelbar.flat block.filled.low:not(:backdrop) + .empty:not(:backdrop), tab levelbar.tab-close-button block.filled.low:not(:backdrop) + .empty:not(:backdrop),
+    tab levelbar.tab-indicator block.filled.low:not(:backdrop) + .empty:not(:backdrop) {
+      background: rgba(198, 38, 46, 0.2); }
+  levelbar.flat block.filled.middle:not(:backdrop), tab levelbar.tab-close-button block.filled.middle:not(:backdrop),
+  tab levelbar.tab-indicator block.filled.middle:not(:backdrop) {
+    background: #ad5f00; }
+    levelbar.flat block.filled.middle:not(:backdrop) + .empty:not(:backdrop), tab levelbar.tab-close-button block.filled.middle:not(:backdrop) + .empty:not(:backdrop),
+    tab levelbar.tab-indicator block.filled.middle:not(:backdrop) + .empty:not(:backdrop) {
+      background: rgba(173, 95, 0, 0.2); }
+  levelbar.flat block.filled.high:not(:backdrop), tab levelbar.tab-close-button block.filled.high:not(:backdrop),
+  tab levelbar.tab-indicator block.filled.high:not(:backdrop) {
+    background: rgba(51, 51, 51, 0.6); }
+  levelbar.flat block.filled.full:not(:backdrop), tab levelbar.tab-close-button block.filled.full:not(:backdrop),
+  tab levelbar.tab-indicator block.filled.full:not(:backdrop) {
+    background: #3a9104; }
+    levelbar.flat block.filled.full:not(:backdrop) + .empty:not(:backdrop), tab levelbar.tab-close-button block.filled.full:not(:backdrop) + .empty:not(:backdrop),
+    tab levelbar.tab-indicator block.filled.full:not(:backdrop) + .empty:not(:backdrop) {
+      background: rgba(58, 145, 4, 0.2); }
+  levelbar.flat block.filled:backdrop, tab levelbar.tab-close-button block.filled:backdrop,
+  tab levelbar.tab-indicator block.filled:backdrop {
+    background: rgba(51, 51, 51, 0.2); }
+
+levelbar.flat.inverted block.filled.low:not(:backdrop), tab levelbar.inverted.tab-close-button block.filled.low:not(:backdrop),
+tab levelbar.inverted.tab-indicator block.filled.low:not(:backdrop) {
+  background: #3a9104; }
+  levelbar.flat.inverted block.filled.low:not(:backdrop) + .empty:not(:backdrop), tab levelbar.inverted.tab-close-button block.filled.low:not(:backdrop) + .empty:not(:backdrop),
+  tab levelbar.inverted.tab-indicator block.filled.low:not(:backdrop) + .empty:not(:backdrop) {
+    background: rgba(58, 145, 4, 0.2); }
+
+levelbar.flat.inverted block.filled.middle:not(:backdrop), tab levelbar.inverted.tab-close-button block.filled.middle:not(:backdrop),
+tab levelbar.inverted.tab-indicator block.filled.middle:not(:backdrop) {
+  background: rgba(51, 51, 51, 0.6); }
+
+levelbar.flat.inverted block.filled.high:not(:backdrop), tab levelbar.inverted.tab-close-button block.filled.high:not(:backdrop),
+tab levelbar.inverted.tab-indicator block.filled.high:not(:backdrop) {
+  background: #ad5f00; }
+  levelbar.flat.inverted block.filled.high:not(:backdrop) + .empty:not(:backdrop), tab levelbar.inverted.tab-close-button block.filled.high:not(:backdrop) + .empty:not(:backdrop),
+  tab levelbar.inverted.tab-indicator block.filled.high:not(:backdrop) + .empty:not(:backdrop) {
+    background: rgba(173, 95, 0, 0.2); }
+
+levelbar.flat.inverted block.filled.full:not(:backdrop), tab levelbar.inverted.tab-close-button block.filled.full:not(:backdrop),
+tab levelbar.inverted.tab-indicator block.filled.full:not(:backdrop) {
+  background: #c6262e; }
+  levelbar.flat.inverted block.filled.full:not(:backdrop) + .empty:not(:backdrop), tab levelbar.inverted.tab-close-button block.filled.full:not(:backdrop) + .empty:not(:backdrop),
+  tab levelbar.inverted.tab-indicator block.filled.full:not(:backdrop) + .empty:not(:backdrop) {
+    background: rgba(198, 38, 46, 0.2); }
+
+.linked:not(.vertical) > combobox:not(:first-child) > box > button.combo, combobox.linked button:nth-child(2), viewswitcher > box > button.horizontal.radio:not(:first-child),
+.linked:not(.vertical) > button:not(:first-child),
+.linked:not(.vertical) > entry:not(:first-child),
+.linked:not(.vertical) > spinbutton:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -gtk-outline-top-left-radius: 0;
+  -gtk-outline-bottom-left-radius: 0;
+  margin-left: 0; }
+
+.linked:not(.vertical) > combobox:not(:last-child) > box > button.combo, viewswitcher > box > button.horizontal.radio:not(:last-child),
+.linked:not(.vertical) > button:not(:last-child),
+.linked:not(.vertical) > entry:not(:last-child),
+.linked:not(.vertical) > spinbutton:not(:last-child) {
+  border-right-style: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -gtk-outline-top-right-radius: 0;
+  -gtk-outline-bottom-right-radius: 0;
+  margin-right: 0; }
+
+.linked.vertical > combobox:not(:first-child) > box > button.combo, .linked.vertical > button:not(:first-child),
+.linked.vertical > entry:not(:first-child),
+.linked.vertical > spinbutton:not(:first-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  -gtk-outline-top-left-radius: 0;
+  -gtk-outline-top-right-radius: 0; }
+
+.linked.vertical > combobox:not(:last-child) > box > button.combo, .linked.vertical > button:not(:last-child),
+.linked.vertical > entry:not(:last-child),
+.linked.vertical > spinbutton:not(:last-child) {
+  border-bottom-style: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  -gtk-outline-bottom-left-radius: 0;
+  -gtk-outline-bottom-right-radius: 0; }
+
+list {
+  background-color: white; }
+  popover list {
+    background-color: transparent; }
+  list row:focus, list row:selected {
+    background: rgba(51, 51, 51, 0.15); }
+  list .h4, list .emoji-picker box.vertical > label, .emoji-picker list box.vertical > label {
+    padding-left: 0.500000001rem;
+    padding-right: 0.500000001rem; }
+  list.content,
+  list.content list {
+    background-color: transparent; }
+  list.content list.nested > row:not(:active):not(:hover):not(:selected), list.content list.nested > row:not(:active):hover:not(.activatable):not(:selected) {
+    background-color: #fdfdfd; }
+  list.content > row:not(.expander):not(:active):not(:hover):not(:selected), list.content > row:not(.expander):not(:active):hover:not(.activatable):not(:selected), list.content > row.expander row.header:not(:active):not(:hover):not(:selected), list.content > row.expander row.header:not(:active):hover:not(.activatable):not(:selected) {
+    background-color: white; }
+  list.content > row:not(.expander):not(:active):hover.activatable:not(:selected), list.content > row.expander row.header:not(:active):hover.activatable:not(:selected) {
+    background-color: #fdfdfd; }
+  list.content > row,
+  list.content > row list > row {
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); }
+  list.content > row:not(:last-child) {
+    border-width: 1px 1px 0 1px; }
+  list.content > row:first-child, list.content > row.expander:first-child row.header, list.content > row.expander:checked, list.content > row.expander:checked row.header, list.content > row.expander:checked + row, list.content > row.expander:checked + row.expander row.header {
+    border-top-right-radius: 0.250000001rem;
+    border-top-left-radius: 0.250000001rem; }
+  list.content > row:last-child, list.content > row.checked-expander-row-previous-sibling, list.content > row.expander:checked {
+    border-width: 1px; }
+  list.content > row:last-child, list.content > row.checked-expander-row-previous-sibling, list.content > row.expander:checked, list.content > row.expander:not(:checked):last-child row.header, list.content > row.expander:not(:checked).checked-expander-row-previous-sibling row.header, list.content > row.expander.empty:checked row.header, list.content > row.expander list.nested > row:last-child {
+    border-bottom-right-radius: 0.250000001rem;
+    border-bottom-left-radius: 0.250000001rem; }
+  list.content > row.expander:checked:not(:first-child), list.content > row.expander:checked + row {
+    margin-top: 1.000000001rem; }
+
+menubar > menuitem {
+  padding: 0.250000001rem 0.500000001rem; }
+  menubar > menuitem image,
+  menubar > menuitem label {
+    padding: 0.250000001rem; }
+
+popover, menu,
+window.menu,
+window.popup {
+  background-color: #fafafa;
+  border-radius: 0.500000001rem;
+  color: #333; }
+  popover arrow, menu arrow,
+  window.menu arrow,
+  window.popup arrow {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+    min-height: 16px;
+    min-width: 16px; }
+    popover arrow:dir(rtl), menu arrow:dir(rtl),
+    window.menu arrow:dir(rtl),
+    window.popup arrow:dir(rtl) {
+      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
+    popover arrow.top, menu arrow.top,
+    window.menu arrow.top,
+    window.popup arrow.top {
+      border-bottom: 1px solid @menu_separator;
+      margin-top: -6px;
+      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+    popover arrow.bottom, menu arrow.bottom,
+    window.menu arrow.bottom,
+    window.popup arrow.bottom {
+      border-top: 1px solid @menu_separator;
+      margin-bottom: -18px;
+      margin-top: 16px;
+      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+    popover arrow.left, menu arrow.left,
+    window.menu arrow.left,
+    window.popup arrow.left {
+      -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
+    popover arrow:disabled, menu arrow:disabled,
+    window.menu arrow:disabled,
+    window.popup arrow:disabled {
+      border: none;
+      margin: 0;
+      min-height: 0;
+      min-width: 0; }
+
+popover menuitem,
+popover modelbutton,
+popover .menuitem, menu menuitem,
+menu .menuitem,
+window.menu menuitem,
+window.menu .menuitem,
+window.popup menuitem,
+window.popup .menuitem {
+  color: #333;
+  font-weight: initial;
+  letter-spacing: initial;
+  min-width: 12.500000001rem;
+  padding: 0.500000001rem 1.000000001rem; }
+  popover menuitem:disabled,
+  popover modelbutton:disabled,
+  popover .menuitem:disabled, menu menuitem:disabled,
+  menu .menuitem:disabled,
+  window.menu menuitem:disabled,
+  window.menu .menuitem:disabled,
+  window.popup menuitem:disabled,
+  window.popup .menuitem:disabled {
+    color: #979797; }
+    popover menuitem:disabled .keycap,
+    popover modelbutton:disabled .keycap,
+    popover .menuitem:disabled .keycap, menu menuitem:disabled .keycap,
+    menu .menuitem:disabled .keycap,
+    window.menu menuitem:disabled .keycap,
+    window.menu .menuitem:disabled .keycap,
+    window.popup menuitem:disabled .keycap,
+    window.popup .menuitem:disabled .keycap {
+      opacity: 0.7; }
+  popover menuitem:hover,
+  popover modelbutton:hover,
+  popover .menuitem:hover, menu menuitem:hover,
+  menu .menuitem:hover,
+  window.menu menuitem:hover,
+  window.menu .menuitem:hover,
+  window.popup menuitem:hover,
+  window.popup .menuitem:hover {
+    box-shadow: none;
+    background-color: rgba(51, 51, 51, 0.15); }
+  popover menuitem.destructive-action,
+  popover modelbutton.destructive-action,
+  popover .destructive-action.menuitem, menu menuitem.destructive-action,
+  menu .destructive-action.menuitem,
+  window.menu menuitem.destructive-action,
+  window.menu .destructive-action.menuitem,
+  window.popup menuitem.destructive-action,
+  window.popup .destructive-action.menuitem {
+    color: #c6262e; }
+    popover menuitem.destructive-action:hover,
+    popover modelbutton.destructive-action:hover,
+    popover .destructive-action.menuitem:hover, menu menuitem.destructive-action:hover,
+    menu .destructive-action.menuitem:hover,
+    window.menu menuitem.destructive-action:hover,
+    window.menu .destructive-action.menuitem:hover,
+    window.popup menuitem.destructive-action:hover,
+    window.popup .destructive-action.menuitem:hover {
+      background-color: rgba(198, 38, 46, 0.2); }
+  popover menuitem .keycap,
+  popover modelbutton .keycap,
+  popover .menuitem .keycap, menu menuitem .keycap,
+  menu .menuitem .keycap,
+  window.menu menuitem .keycap,
+  window.menu .menuitem .keycap,
+  window.popup menuitem .keycap,
+  window.popup .menuitem .keycap {
+    background: rgba(0, 0, 0, 0.08);
+    border: none;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+    color: alpha(@fg_color, 0.78);
+    margin: 0 0 1px;
+    padding: 0.250000001rem 0.500000001rem calc(0.250000001rem - 1px); }
+  popover menuitem switch slider,
+  popover modelbutton switch slider,
+  popover .menuitem switch slider, menu menuitem switch slider,
+  menu .menuitem switch slider,
+  window.menu menuitem switch slider,
+  window.menu .menuitem switch slider,
+  window.popup menuitem switch slider,
+  window.popup .menuitem switch slider {
+    min-height: 1.6666666677rem;
+    min-width: 1.6666666677rem; }
+
+menu,
+window.menu,
+window.popup {
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07);
+  padding: 0.500000001rem 0; }
+  menu.context-menu,
+  window.menu.context-menu,
+  window.popup.context-menu {
+    font: initial; }
+  menu decoration,
+  window.menu decoration,
+  window.popup decoration {
+    border-radius: 0.500000001rem;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.15), 0 3px 3px -3px rgba(0, 0, 0, 0.35); }
+  menu window.popup decoration,
+  window.menu window.popup decoration,
+  window.popup window.popup decoration {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 3px 8px 2px rgba(0, 0, 0, 0.1), 0 5px 5px -3px rgba(0, 0, 0, 0.4), 0 8px 5px 1px rgba(0, 0, 0, 0.1); }
+  menu menuitem:dir(ltr) image:first-child,
+  menu .menuitem:dir(ltr) image:first-child,
+  window.menu menuitem:dir(ltr) image:first-child,
+  window.menu .menuitem:dir(ltr) image:first-child,
+  window.popup menuitem:dir(ltr) image:first-child,
+  window.popup .menuitem:dir(ltr) image:first-child {
+    margin-left: -1.9166666677rem;
+    padding-left: 0;
+    padding-right: 0.4166666677rem; }
+  menu menuitem:dir(ltr) > check,
+  menu menuitem:dir(ltr) > radio,
+  menu .menuitem:dir(ltr) > check,
+  menu .menuitem:dir(ltr) > radio,
+  window.menu menuitem:dir(ltr) > check,
+  window.menu menuitem:dir(ltr) > radio,
+  window.menu .menuitem:dir(ltr) > check,
+  window.menu .menuitem:dir(ltr) > radio,
+  window.popup menuitem:dir(ltr) > check,
+  window.popup menuitem:dir(ltr) > radio,
+  window.popup .menuitem:dir(ltr) > check,
+  window.popup .menuitem:dir(ltr) > radio {
+    margin-right: 0.500000001rem;
+    margin-left: -0.500000001rem; }
+  menu menuitem:dir(rtl) image:first-child,
+  menu .menuitem:dir(rtl) image:first-child,
+  window.menu menuitem:dir(rtl) image:first-child,
+  window.menu .menuitem:dir(rtl) image:first-child,
+  window.popup menuitem:dir(rtl) image:first-child,
+  window.popup .menuitem:dir(rtl) image:first-child {
+    margin-right: -1.9166666677rem;
+    padding-left: 0.4166666677rem;
+    padding-right: 0; }
+  menu menuitem:dir(rtl) > check,
+  menu menuitem:dir(rtl) > radio,
+  menu .menuitem:dir(rtl) > check,
+  menu .menuitem:dir(rtl) > radio,
+  window.menu menuitem:dir(rtl) > check,
+  window.menu menuitem:dir(rtl) > radio,
+  window.menu .menuitem:dir(rtl) > check,
+  window.menu .menuitem:dir(rtl) > radio,
+  window.popup menuitem:dir(rtl) > check,
+  window.popup menuitem:dir(rtl) > radio,
+  window.popup .menuitem:dir(rtl) > check,
+  window.popup .menuitem:dir(rtl) > radio {
+    margin-left: 0.500000001rem;
+    margin-right: -0.500000001rem; }
+  menu separator,
+  window.menu separator,
+  window.popup separator {
+    border-top: 1px solid @menu_separator;
+    border-bottom: 1px solid @menu_separator_shadow;
+    margin: 0.250000001rem 0; }
+
+tabbox, notebook header {
+  background-color: #f1f1f1;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) calc(100% - 0.1666666677rem), rgba(0, 0, 0, 0.05) calc(100% - 0.0833333343rem), rgba(0, 0, 0, 0.15)); }
+  tabbox.bottom, notebook header.bottom {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) calc(100% - 0.1666666677rem), rgba(0, 0, 0, 0.05) calc(100% - 0.0833333343rem), rgba(0, 0, 0, 0.15)); }
+  tabbox.right, notebook header.right {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) calc(100% - 0.1666666677rem), rgba(0, 0, 0, 0.05) calc(100% - 0.0833333343rem), rgba(0, 0, 0, 0.15)); }
+  tabbox.left, notebook header.left {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) calc(100% - 0.1666666677rem), rgba(0, 0, 0, 0.05) calc(100% - 0.0833333343rem), rgba(0, 0, 0, 0.15)); }
+  tabbox:backdrop, notebook header:backdrop {
+    background-color: #fafafa; }
+
+notebook header > box > button.image-button,
+notebook header > button.image-button {
+  min-width: 2.000000001rem; }
+
+notebook header arrow {
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+  min-height: 16px;
+  min-width: 16px; }
+  notebook header arrow.down {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
+  notebook header arrow:disabled {
+    color: #979797; }
+
+notebook viewport {
+  background-color: white; }
+
+tab {
+  border-radius: 0.250000001rem;
+  transition: all 300ms ease-in;
+  min-width: 24px;
+  padding: 0.250000001rem; }
+  tabbox tab, notebook header tab {
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    transition: all 150ms ease-in; }
+  tabbox tab, notebook header tab, .bottom tab, .top tab {
+    margin: 0.250000001rem 0; }
+  .left tab, .right tab {
+    margin: 0 0.250000001rem; }
+  tab:hover:not(:checked) {
+    background-color: #dfdfdf; }
+  tab:checked {
+    background-color: white;
+    box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.07), 0 1px 2px rgba(0, 0, 0, 0.08); }
+    tabbox tab:checked, notebook header tab:checked {
+      border-color: rgba(0, 0, 0, 0.1);
+      box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07); }
+    tab:checked:backdrop {
+      background-color: #fafafa; }
+
+window.notification .draw-area {
+  background-color: #fafafa;
+  border-radius: 0.500000001rem;
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px rgba(0, 0, 0, 0.2), 0 3px 8px 2px rgba(0, 0, 0, 0.1), 0 5px 5px -3px rgba(0, 0, 0, 0.4), 0 8px 5px 1px rgba(0, 0, 0, 0.1); }
+  window.notification .draw-area image {
+    color: rgba(51, 51, 51, 0.78); }
+  window.notification .draw-area label.title {
+    font-weight: 700; }
+  window.notification .draw-area .urgent label.title {
+    color: @error_color; }
+
+paned.horizontal > separator {
+  background-image: linear-gradient(to right, @menu_separator 1px, @menu_separator_shadow 1px, @menu_separator_shadow 2px, transparent 2px);
+  margin-right: -8px;
+  min-width: 9px; }
+
+paned.vertical > separator {
+  background-image: linear-gradient(to bottom, @menu_separator 1px, @menu_separator_shadow 1px, @menu_separator_shadow 2px, transparent 2px);
+  margin-bottom: -8px;
+  min-height: 9px; }
+
+popover {
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15), 0 3px 3px -3px rgba(0, 0, 0, 0.35);
+  margin: 6px; }
+  popover label.h4, popover .emoji-picker box.vertical > label, .emoji-picker popover box.vertical > label {
+    margin: 0 1.000000001rem; }
+  popover menuitem.h4 label {
+    padding: 0; }
+  popover separator.horizontal {
+    border-top: 1px solid @menu_separator;
+    border-bottom: 1px solid @menu_separator_shadow;
+    margin-bottom: -1px; }
+  popover separator.vertical {
+    border-left: 1px solid @menu_separator;
+    border-right: 1px solid @menu_separator_shadow;
+    margin-right: -1px; }
+  popover undershoot.top {
+    background: linear-gradient(#fafafa 0%, rgba(250, 250, 250, 0) 50%); }
+  popover undershoot.bottom {
+    background: linear-gradient(rgba(250, 250, 250, 0) 50%, #fafafa 100%); }
+
+progressbar {
+  border-radius: 0.1666666677rem; }
+  progressbar progress,
+  progressbar trough {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.1666666677rem; }
+  progressbar progress {
+    background-color: @accent_color;
+    box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07); }
+    progressbar progress:backdrop {
+      background-color: #dfdfdf; }
+  progressbar trough {
+    background-color: #fafafa;
+    box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 1px 1px rgba(0, 0, 0, 0.05); }
+  progressbar.horizontal progress {
+    margin-left: -1px;
+    margin-right: -1px; }
+    progressbar.horizontal progress:not(.pulse) {
+      animation: progress 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      background-size: cover, 48px 100%;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(to bottom, alpha(@highlight_color, 0.2), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25) 60%, rgba(255, 255, 255, 0)); }
+      progressbar.horizontal progress:not(.pulse).right {
+        animation-direction: reverse; }
+    progressbar.horizontal progress:backdrop {
+      animation: none;
+      background-image: none; }
+  progressbar.vertical progress {
+    margin: -1px 0; }
+  progressbar.flat progress, tab progressbar.tab-close-button progress,
+  tab progressbar.tab-indicator progress,
+  progressbar.flat trough,
+  tab progressbar.tab-close-button trough,
+  tab progressbar.tab-indicator trough {
+    box-shadow: none;
+    border: none;
+    border-radius: 0.500000001rem;
+    margin: 0; }
+  progressbar.flat progress, tab progressbar.tab-close-button progress,
+  tab progressbar.tab-indicator progress,
+  progressbar.flat progress:backdrop,
+  progressbar.flat .horizontal progress {
+    animation: none;
+    background: alpha(@fg_color, 0.78); }
+  progressbar.flat trough, tab progressbar.tab-close-button trough,
+  tab progressbar.tab-indicator trough {
+    background: alpha(@fg_color, 0.15); }
+
+@keyframes progress {
+  from {
+    background-position: 0, calc(0% - 48px), 0%; }
+  to {
+    background-position: 0, calc(100% + 48px), 0%; } }
+
+scale fill {
+  background-color: rgba(0, 0, 0, 0.25); }
+
+scale highlight {
+  background-color: rgba(51, 51, 51, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.03); }
+  scale highlight:disabled {
+    background-color: rgba(51, 51, 51, 0.25);
+    border-color: transparent;
+    box-shadow: none; }
+
+scale mark indicator {
+  color: #b4b4b4; }
+
+scale slider {
+  background-color: #fafafa;
+  border-radius: 1.000000001rem;
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+  min-height: 1.1666666677rem;
+  min-width: 1.1666666677rem; }
+  scale slider:backdrop {
+    box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 1px 1px rgba(0, 0, 0, 0.08); }
+  scale slider:disabled {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    box-shadow: none; }
+
+scale trough {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1.000000001rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.03), 0 1px 0 0 alpha(@highlight_color, 0.3);
+  min-height: 0.250000001rem;
+  min-width: 0.250000001rem; }
+  scale trough:disabled {
+    background-image: none; }
+
+scale.accent fill {
+  background-color: alpha(@accent_color_500, 0.33); }
+
+scale.accent highlight {
+  background-color: alpha (@accent_color_500, 0.67); }
+
+scale.temperature trough {
+  background-image: linear-gradient(to right, #3689e6, #f9c440); }
+
+scale.temperature:dir(rtl) trough {
+  background-image: linear-gradient(to left, #3689e6, #f9c440); }
+
+scale.warmth trough {
+  background-image: linear-gradient(to right, #fddebc, #f37329); }
+
+scale.warmth:dir(rtl) trough {
+  background-image: linear-gradient(to left, #fddebc, #f37329); }
+
+scale.horizontal highlight.top,
+scale.horizontal fill.top {
+  border-radius: 1.000000001rem 0 0 1.000000001rem;
+  margin: -1px 0 -1px calc(-0.500000001rem - 1px); }
+
+scale.horizontal highlight.bottom,
+scale.horizontal fill.bottom {
+  border-radius: 0 1.000000001rem 1.000000001rem 0;
+  margin: -1px calc(-0.500000001rem - 1px) -1px 0; }
+
+scale.horizontal mark indicator {
+  min-height: 0.500000001rem;
+  min-width: 1px; }
+
+scale.horizontal slider {
+  margin: -0.500000001rem 0; }
+
+scale.horizontal trough {
+  margin: 0.500000001rem 0;
+  padding: 0 0.500000001rem; }
+
+scale.vertical highlight.top,
+scale.vertical fill.top {
+  border-radius: 1.000000001rem 1.000000001rem 0 0;
+  margin: calc(-0.500000001rem - 1px) -1px 0 -1px; }
+
+scale.vertical highlight.bottom,
+scale.vertical fill.bottom {
+  border-radius: 0 0 1.000000001rem 1.000000001rem;
+  margin: 0 -1px calc(-0.500000001rem - 1px) -1px; }
+
+scale.vertical mark indicator {
+  min-height: 1px;
+  min-width: 0.500000001rem; }
+
+scale.vertical slider {
+  margin: 0 -0.500000001rem; }
+
+scale.vertical trough {
+  margin: 0 0.500000001rem;
+  padding: 0.500000001rem 0; }
+
+.seek-bar scale slider {
+  background: transparent;
+  border: transparent;
+  box-shadow: none;
+  min-width: 0;
+  min-height: 0; }
+
+scrolledwindow {
+  -GtkScrolledWindow-scrollbar-spacing: 0; }
+
+scrollbar {
+  background-color: transparent;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  -GtkScrollbar-has-backward-stepper: false;
+  -GtkScrollbar-has-forward-stepper: false; }
+  scrollbar:hover, scrollbar.hovering {
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1); }
+    scrollbar:hover trough, scrollbar.hovering trough {
+      background-color: transparent;
+      border-radius: 0; }
+  scrollbar button {
+    border: none;
+    background-image: none;
+    background-color: transparent; }
+  scrollbar slider {
+    background-clip: padding-box;
+    background-color: rgba(51, 51, 51, 0.6);
+    border: 1px solid rgba(250, 250, 250, 0.25);
+    border-radius: 0.8333333343rem;
+    margin: 1px;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+  scrollbar.horizontal slider {
+    min-width: 2.6666666677rem;
+    min-height: 0.250000001rem; }
+  scrollbar.horizontal:hover slider, scrollbar.horizontal.hovering slider {
+    min-height: 0.750000001rem; }
+  scrollbar.vertical slider {
+    min-height: 2.6666666677rem;
+    min-width: 0.250000001rem; }
+  scrollbar.vertical:hover slider, scrollbar.vertical.hovering slider {
+    min-width: 0.750000001rem; }
+  scrollbar.overlay-indicator slider {
+    border-radius: 1.6666666677rem; }
+  scrollbar.overlay-indicator trough {
+    background-color: transparent; }
+  scrollbar.overlay-indicator:hover trough, scrollbar.overlay-indicator.hovering trough {
+    background-color: rgba(51, 51, 51, 0.1); }
+  scrollbar trough {
+    padding: 0;
+    transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1); }
+
+separator.horizontal {
+  border-top: 1px solid @menu_separator;
+  border-bottom: 1px solid @menu_separator_shadow;
+  margin-bottom: -1px; }
+
+separator.vertical {
+  border-left: 1px solid @menu_separator;
+  border-right: 1px solid @menu_separator_shadow;
+  margin-right: -1px; }
+
+actionbar > separator, toolbar > separator, .titlebar > separator {
+  border: none;
+  margin: 0 1.500000001rem; }
+
+stacksidebar separator.horizontal {
+  border: none; }
+
+separator.titlebutton {
+  border: none;
+  margin: 0 0.250000001rem; }
+
+treeview.sidebar .view:hover, .sidebar list row:hover,
+.sidebar > label:hover {
+  background-color: rgba(255, 255, 255, 0.75); }
+
+treeview.sidebar .view:selected, .sidebar list row:selected,
+.sidebar > label:selected, treeview.sidebar .highlight.view, .sidebar list row.highlight,
+.sidebar > label.highlight {
+  background-color: #dfdfdf;
+  color: #333; }
+
+popover .sidebar, popover .sidebar.view, popover .source-list {
+  background: transparent; }
+
+.sidebar,
+.sidebar list, window.unified.csd .sidebar headerbar.titlebar.flat, window.unified.csd .sidebar .inline-toolbar button.titlebar, window.unified.csd .sidebar actionbar.flat button.titlebar,
+window.unified.csd .sidebar .bottom-toolbar.flat button.titlebar,
+window.unified.csd .sidebar tab .bottom-toolbar.tab-close-button button.titlebar,
+tab window.unified.csd .sidebar .bottom-toolbar.tab-close-button button.titlebar,
+window.unified.csd .sidebar tab .bottom-toolbar.tab-indicator button.titlebar,
+tab window.unified.csd .sidebar .bottom-toolbar.tab-indicator button.titlebar, window.unified.csd .sidebar .emoji-picker stack box > box.horizontal button.titlebar, window.unified.csd .emoji-picker stack .sidebar box > box.horizontal button.titlebar, .emoji-picker stack window.unified.csd .sidebar box > box.horizontal button.titlebar, window.unified.csd .sidebar tab .titlebar.tab-close-button, tab window.unified.csd .sidebar .titlebar.tab-close-button,
+window.unified.csd .sidebar tab .titlebar.tab-indicator,
+tab window.unified.csd .sidebar .titlebar.tab-indicator,
+.sidebar .view,
+.sidebar.view,
+.sidebar.view list, window.unified.csd .sidebar.view headerbar.titlebar.flat,
+.sidebar.view .view,
+.source-list,
+.source-list list, window.unified.csd .source-list headerbar.titlebar.flat, .sidebar .inline-toolbar window.unified.csd .source-list button.titlebar, .sidebar actionbar.flat window.unified.csd .source-list button.titlebar,
+.sidebar .bottom-toolbar.flat window.unified.csd .source-list button.titlebar,
+.sidebar tab .bottom-toolbar.tab-close-button window.unified.csd .source-list button.titlebar,
+tab .sidebar .bottom-toolbar.tab-close-button window.unified.csd .source-list button.titlebar,
+.sidebar tab .bottom-toolbar.tab-indicator window.unified.csd .source-list button.titlebar,
+tab .sidebar .bottom-toolbar.tab-indicator window.unified.csd .source-list button.titlebar, .sidebar .emoji-picker stack box > box.horizontal window.unified.csd .source-list button.titlebar, .emoji-picker stack .sidebar box > box.horizontal window.unified.csd .source-list button.titlebar, window.unified.csd .source-list tab .titlebar.tab-close-button, tab window.unified.csd .source-list .titlebar.tab-close-button,
+window.unified.csd .source-list tab .titlebar.tab-indicator,
+tab window.unified.csd .source-list .titlebar.tab-indicator,
+.source-list .view {
+  background-color: #f1f1f1; }
+
+.sidebar list row,
+.sidebar > label {
+  padding: 0.500000001rem 1.000000001rem; }
+
+assistant .sidebar:dir(ltr) {
+  border-right: 1px solid @menu_separator;
+  box-shadow: inset -1px 0 0 @menu_separator_shadow; }
+
+assistant .sidebar:dir(rtl) {
+  border-left: 1px solid @menu_separator;
+  box-shadow: inset 1px 0 0 @menu_separator_shadow; }
+
+placessidebar.frame,
+placessidebar viewport.frame {
+  border: none; }
+  placessidebar.frame .sidebar-icon,
+  placessidebar viewport.frame .sidebar-icon {
+    -gtk-icon-style: regular; }
+  placessidebar.frame .sidebar-icon + .sidebar-label:dir(ltr),
+  placessidebar.frame .sidebar-label + .sidebar-icon:dir(rtl),
+  placessidebar viewport.frame .sidebar-icon + .sidebar-label:dir(ltr),
+  placessidebar viewport.frame .sidebar-label + .sidebar-icon:dir(rtl) {
+    margin-left: 0.500000001rem; }
+
+treeview.sidebar {
+  -GtkTreeView-horizontal-separator: 1px;
+  -GtkTreeView-vertical-separator: 6px; }
+  treeview.sidebar entry.flat, treeview.sidebar tab entry.tab-close-button, tab treeview.sidebar entry.tab-close-button,
+  treeview.sidebar tab entry.tab-indicator,
+  tab treeview.sidebar entry.tab-indicator {
+    background-color: #dfdfdf; }
+
+spinbutton button,
+spinbutton button:disabled,
+spinbutton entry,
+spinbutton entry:disabled,
+spinbutton entry:focus {
+  background: none;
+  border: none;
+  box-shadow: none; }
+
+spinbutton button:active {
+  box-shadow: none; }
+
+spinbutton.horizontal button {
+  padding: 0.3333333343rem; }
+  spinbutton.horizontal button:dir(ltr) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
+  spinbutton.horizontal button:dir(rtl) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0; }
+  spinbutton.horizontal button.down {
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0 1px; }
+
+spinbutton.horizontal entry {
+  margin: 0 0.250000001rem; }
+
+spinbutton.vertical button.down {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+
+spinbutton.vertical button.up {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+spinner {
+  background-image: none;
+  opacity: 0;
+  -gtk-icon-source: -gtk-icontheme("process-working-symbolic"); }
+  spinner:checked {
+    opacity: 0.8;
+    animation: spin 600ms steps(12) infinite; }
+    spinner:checked:disabled {
+      opacity: 0.4; }
+
+entry.spin:dir(ltr) image:last-child,
+entry.spin:dir(rtl) image:first-child {
+  animation: spin 600ms steps(12) infinite; }
+
+deck > dimming,
+leaflet > dimming,
+webkitwebview > dimming {
+  background: rgba(0, 0, 0, 0.15); }
+
+deck > border,
+leaflet > border,
+webkitwebview > border {
+  min-width: 1px;
+  min-height: 1px;
+  background: rgba(0, 0, 0, 0.15); }
+
+deck > shadow.left,
+leaflet > shadow.left,
+webkitwebview > shadow.left {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 0.500000001rem); }
+
+deck > shadow.right,
+leaflet > shadow.right,
+webkitwebview > shadow.right {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 0.500000001rem); }
+
+deck > shadow.up,
+leaflet > shadow.up,
+webkitwebview > shadow.up {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 0.500000001rem); }
+
+deck > shadow.down,
+leaflet > shadow.down,
+webkitwebview > shadow.down {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 0.500000001rem); }
+
+.storage-bar .trough {
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.15); }
+
+.storage-bar .fill-block {
+  background-image: linear-gradient(to bottom, #d4d4d4, #abacae);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07);
+  transition: all 200ms ease-in-out;
+  padding: 0.6666666677rem 0.250000001rem; }
+  .storage-bar .fill-block:not(:first-child) {
+    border-left-width: 0; }
+  .storage-bar .fill-block:first-child {
+    border-top-left-radius: 0.250000001rem;
+    border-bottom-left-radius: 0.250000001rem; }
+  .storage-bar .fill-block:last-child {
+    border-top-right-radius: 0.250000001rem;
+    border-bottom-right-radius: 0.250000001rem; }
+  .storage-bar .fill-block.legend {
+    padding: 0.6666666677rem;
+    border-radius: 50%; }
+  .storage-bar .fill-block.empty-block, .storage-bar .fill-block.unused {
+    background-image: linear-gradient(to bottom, #ededed, #d4d4d4);
+    border-color: rgba(0, 0, 0, 0.25); }
+  .storage-bar .fill-block.app {
+    background-image: linear-gradient(to bottom, #a56de2, #7239b3);
+    border-color: rgba(69, 41, 129, 0.8); }
+  .storage-bar .fill-block.audio {
+    background-image: linear-gradient(to bottom, #ffa154, #f37329);
+    border-color: rgba(204, 59, 2, 0.8); }
+  .storage-bar .fill-block.files {
+    background-image: linear-gradient(to bottom, #64baff, #3689e6);
+    border-color: rgba(13, 82, 191, 0.8); }
+  .storage-bar .fill-block.photo {
+    background-image: linear-gradient(to bottom, #ffe16b, #f9c440);
+    border-color: rgba(212, 142, 21, 0.8); }
+  .storage-bar .fill-block.video {
+    background-image: linear-gradient(to bottom, #ed5353, #c6262e);
+    border-color: rgba(161, 7, 5, 0.8); }
+
+switch {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 0 0 alpha(@highlight_color, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.05), inset 0 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 1.3333333343rem;
+  transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1); }
+  switch:checked:not(.mode-switch):not(:backdrop) {
+    background-color: @accent_color;
+    border-color: shade(@accent_color, 0.85); }
+    switch:checked:not(.mode-switch):not(:backdrop):disabled {
+      box-shadow: 0 1px 0 0 alpha(@highlight_color, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.05);
+      background-image: none;
+      background-color: mix (@theme_bg_color, @accent_color, 0.5);
+      border-color: shade (mix (@theme_bg_color, @accent_color, 0.5), 0.75); }
+  switch image {
+    color: transparent; }
+  switch slider {
+    background-color: #fafafa;
+    background-clip: padding-box;
+    border-radius: 50%;
+    box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    min-height: 2.000000001rem;
+    min-width: 2.000000001rem; }
+  switch.mode-switch slider {
+    min-height: 1.3333333343rem;
+    min-width: 1.3333333343rem; }
+  switch:disabled {
+    box-shadow: 0 1px 0 0 alpha(@highlight_color, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.05); }
+    switch:disabled slider {
+      background-color: #f1f1f1;
+      box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.07), 0 1px 2px rgba(0, 0, 0, 0.08); }
+
+.app-notification,
+.app-notification.frame {
+  background-color: rgba(51, 51, 51, 0.85);
+  border: none;
+  border-radius: 0.500000001rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 0.500000001rem;
+  padding: 0.500000001rem; }
+  .app-notification button,
+  .app-notification.frame button {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333; }
+    .app-notification button.flat.image-button, .app-notification .sidebar .inline-toolbar button.image-button, .app-notification .sidebar actionbar.flat button.image-button,
+    .app-notification .sidebar .bottom-toolbar.flat button.image-button,
+    .app-notification .sidebar tab .bottom-toolbar.tab-close-button button.image-button,
+    tab .app-notification .sidebar .bottom-toolbar.tab-close-button button.image-button,
+    .app-notification .sidebar tab .bottom-toolbar.tab-indicator button.image-button,
+    tab .app-notification .sidebar .bottom-toolbar.tab-indicator button.image-button,
+    .emoji-picker stack .app-notification .sidebar box > box.horizontal button.bottom-toolbar button.image-button, .sidebar .inline-toolbar .app-notification button.image-button, .sidebar actionbar.flat .app-notification button.image-button,
+    .sidebar .bottom-toolbar.flat .app-notification button.image-button,
+    .sidebar tab .bottom-toolbar.tab-close-button .app-notification button.image-button,
+    tab .sidebar .bottom-toolbar.tab-close-button .app-notification button.image-button,
+    .sidebar tab .bottom-toolbar.tab-indicator .app-notification button.image-button,
+    tab .sidebar .bottom-toolbar.tab-indicator .app-notification button.image-button, .app-notification .sidebar .emoji-picker stack box > box.horizontal button.image-button, .sidebar .emoji-picker stack box > box.horizontal .app-notification button.image-button, .app-notification .emoji-picker stack .sidebar box > box.horizontal button.image-button, .emoji-picker stack .sidebar box > box.horizontal .app-notification button.image-button, .app-notification tab button.image-button.tab-close-button, tab .app-notification button.image-button.tab-close-button,
+    .app-notification tab button.image-button.tab-indicator,
+    tab .app-notification button.image-button.tab-indicator, .app-notification button.close-button,
+    .app-notification.frame button.flat.image-button,
+    .app-notification.frame button.close-button {
+      background-color: #333;
+      border-radius: 50%;
+      color: rgba(255, 255, 255, 0.9);
+      padding: 0.500000001rem; }
+      .app-notification button.flat.image-button:active, .app-notification .sidebar .inline-toolbar button.image-button:active, .app-notification .sidebar actionbar.flat button.image-button:active,
+      .app-notification .sidebar .bottom-toolbar.flat button.image-button:active,
+      .app-notification .sidebar tab .bottom-toolbar.tab-close-button button.image-button:active,
+      tab .app-notification .sidebar .bottom-toolbar.tab-close-button button.image-button:active,
+      .app-notification .sidebar tab .bottom-toolbar.tab-indicator button.image-button:active,
+      tab .app-notification .sidebar .bottom-toolbar.tab-indicator button.image-button:active,
+      .emoji-picker stack .app-notification .sidebar box > box.horizontal button.bottom-toolbar button.image-button:active, .sidebar .inline-toolbar .app-notification button.image-button:active, .sidebar actionbar.flat .app-notification button.image-button:active,
+      .sidebar .bottom-toolbar.flat .app-notification button.image-button:active,
+      .sidebar tab .bottom-toolbar.tab-close-button .app-notification button.image-button:active,
+      tab .sidebar .bottom-toolbar.tab-close-button .app-notification button.image-button:active,
+      .sidebar tab .bottom-toolbar.tab-indicator .app-notification button.image-button:active,
+      tab .sidebar .bottom-toolbar.tab-indicator .app-notification button.image-button:active, .app-notification .sidebar .emoji-picker stack box > box.horizontal button.image-button:active, .sidebar .emoji-picker stack box > box.horizontal .app-notification button.image-button:active, .app-notification .emoji-picker stack .sidebar box > box.horizontal button.image-button:active, .emoji-picker stack .sidebar box > box.horizontal .app-notification button.image-button:active, .app-notification tab button.image-button.tab-close-button:active, tab .app-notification button.image-button.tab-close-button:active,
+      .app-notification tab button.image-button.tab-indicator:active,
+      tab .app-notification button.image-button.tab-indicator:active, .app-notification button.close-button:active,
+      .app-notification.frame button.flat.image-button:active,
+      .app-notification.frame button.close-button:active {
+        background-color: rgba(51, 51, 51, 0.7);
+        box-shadow: none;
+        color: rgba(255, 255, 255, 0.7); }
+    .app-notification button.flat.image-button, .app-notification .sidebar .inline-toolbar button.image-button, .app-notification .sidebar actionbar.flat button.image-button,
+    .app-notification .sidebar .bottom-toolbar.flat button.image-button,
+    .app-notification .sidebar tab .bottom-toolbar.tab-close-button button.image-button,
+    tab .app-notification .sidebar .bottom-toolbar.tab-close-button button.image-button,
+    .app-notification .sidebar tab .bottom-toolbar.tab-indicator button.image-button,
+    tab .app-notification .sidebar .bottom-toolbar.tab-indicator button.image-button,
+    .emoji-picker stack .app-notification .sidebar box > box.horizontal button.bottom-toolbar button.image-button, .sidebar .inline-toolbar .app-notification button.image-button, .sidebar actionbar.flat .app-notification button.image-button,
+    .sidebar .bottom-toolbar.flat .app-notification button.image-button,
+    .sidebar tab .bottom-toolbar.tab-close-button .app-notification button.image-button,
+    tab .sidebar .bottom-toolbar.tab-close-button .app-notification button.image-button,
+    .sidebar tab .bottom-toolbar.tab-indicator .app-notification button.image-button,
+    tab .sidebar .bottom-toolbar.tab-indicator .app-notification button.image-button, .app-notification .sidebar .emoji-picker stack box > box.horizontal button.image-button, .sidebar .emoji-picker stack box > box.horizontal .app-notification button.image-button, .app-notification .emoji-picker stack .sidebar box > box.horizontal button.image-button, .emoji-picker stack .sidebar box > box.horizontal .app-notification button.image-button, .app-notification tab button.image-button.tab-close-button, tab .app-notification button.image-button.tab-close-button,
+    .app-notification tab button.image-button.tab-indicator,
+    tab .app-notification button.image-button.tab-indicator,
+    .app-notification.frame button.flat.image-button {
+      padding: 0.3333333343rem; }
+    .app-notification button.text-button,
+    .app-notification.frame button.text-button {
+      border-width: 0;
+      box-shadow: none; }
+      .app-notification button.text-button:active,
+      .app-notification.frame button.text-button:active {
+        background-color: rgba(255, 255, 255, 0.7);
+        box-shadow: none;
+        color: rgba(51, 51, 51, 0.7); }
+    .app-notification button label,
+    .app-notification.frame button label {
+      color: #333;
+      text-shadow: none; }
+  .app-notification label,
+  .app-notification.frame label {
+    color: white;
+    text-shadow: 0 1px 2px rgba(51, 51, 51, 0.6); }
+
+.inline-toolbar, actionbar.flat,
+.bottom-toolbar.flat,
+tab .bottom-toolbar.tab-close-button,
+tab .bottom-toolbar.tab-indicator,
+.sidebar .inline-toolbar button.bottom-toolbar,
+.sidebar .emoji-picker stack box > box.horizontal button.bottom-toolbar,
+.emoji-picker stack .sidebar box > box.horizontal button.bottom-toolbar, .emoji-picker stack box > box.horizontal {
+  background-color: #fafafa;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1px, rgba(0, 0, 0, 0.07) 1px, transparent 0.250000001rem);
+  box-shadow: none; }
+  .inline-toolbar:backdrop, actionbar.flat:backdrop,
+  .bottom-toolbar.flat:backdrop,
+  tab .bottom-toolbar.tab-close-button:backdrop,
+  tab .bottom-toolbar.tab-indicator:backdrop,
+  .sidebar .inline-toolbar button.bottom-toolbar:backdrop,
+  .sidebar .emoji-picker stack box > box.horizontal button.bottom-toolbar:backdrop,
+  .emoji-picker stack .sidebar box > box.horizontal button.bottom-toolbar:backdrop, .emoji-picker stack box > box.horizontal:backdrop {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1px, rgba(0, 0, 0, 0.04) 1px, transparent 0.250000001rem);
+    box-shadow: none; }
+  .sidebar .inline-toolbar, .sidebar actionbar.flat,
+  .sidebar .bottom-toolbar.flat,
+  .sidebar tab .bottom-toolbar.tab-close-button,
+  tab .sidebar .bottom-toolbar.tab-close-button,
+  .sidebar tab .bottom-toolbar.tab-indicator,
+  tab .sidebar .bottom-toolbar.tab-indicator,
+  .sidebar .inline-toolbar button.bottom-toolbar,
+  .sidebar .emoji-picker stack box > box.horizontal button.bottom-toolbar,
+  .emoji-picker stack .sidebar box > box.horizontal button.bottom-toolbar, .sidebar .emoji-picker stack box > box.horizontal, .emoji-picker stack .sidebar box > box.horizontal {
+    background-color: #e8e8e8;
+    background-image: linear-gradient(to bottom, @menu_separator 1px, rgba(0, 0, 0, 0.04) 1px, transparent 0.250000001rem);
+    padding: 0.250000001rem 0.500000001rem; }
+
+actionbar,
+.bottom-toolbar {
+  background-color: @color_primary;
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px alpha(shade(@color_primary, 0.7), 0.4), 0 -0.0833333343rem 0.1666666677rem rgba(0, 0, 0, 0.2);
+  padding: 0.250000001rem 0.500000001rem;
+  /* Workaround for border */ }
+  revealer > actionbar, revealer > .bottom-toolbar {
+    margin-top: 1px; }
+  actionbar:backdrop,
+  .bottom-toolbar:backdrop {
+    box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px alpha(shade(@color_primary, 0.7), 0.3), 0 -0.0833333343rem 0.0833333343rem rgba(0, 0, 0, 0.15); }
+  viewswitcherbar actionbar, viewswitcherbar .bottom-toolbar {
+    background: transparent;
+    box-shadow: none;
+    padding: 0; }
+
+.search-bar {
+  background-color: #f1f1f1; }
+
+tooltip.background,
+.overlay-bar {
+  background-color: rgba(26, 26, 26, 0.9);
+  border-radius: 0.250000001rem;
+  padding: 0.250000001rem 0.500000001rem; }
+  tooltip.background label,
+  tooltip.background spinner,
+  .overlay-bar label,
+  .overlay-bar spinner {
+    color: white;
+    text-shadow: 0 0.0833333343rem 0.1666666677rem rgba(0, 0, 0, 0.6);
+    -gtk-icon-shadow: 0 0.0833333343rem 0.1666666677rem rgba(0, 0, 0, 0.6); }
+
+tooltip.csd decoration,
+.overlay-bar {
+  border-radius: 0.250000001rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 0.250000001rem; }
+
+treeview.view.cell:selected {
+  background: rgba(51, 51, 51, 0.15); }
+
+treeview entry.flat {
+  padding: 0.3333333343rem 0.0833333343rem;
+  background: inherit; }
+
+treeview header button {
+  border-left-width: 0;
+  border-radius: 0;
+  border-top-width: 0; }
+  treeview header button:last-child {
+    border-right-width: 0; }
+  treeview header button label {
+    font-weight: 600;
+    opacity: 0.8; }
+  treeview header button:backdrop label {
+    opacity: 0.6; }
+
+frame,
+.frame {
+  border: 1px solid rgba(0, 0, 0, 0.2); }
+  frame.flat,
+  .frame.flat,
+  tab .frame.tab-close-button,
+  tab .frame.tab-indicator,
+  .sidebar .inline-toolbar button.frame,
+  .sidebar .emoji-picker stack box > box.horizontal button.frame,
+  .emoji-picker stack .sidebar box > box.horizontal button.frame,
+  .sidebar actionbar.flat button.frame,
+  .sidebar .bottom-toolbar.flat button.frame,
+  .sidebar tab .bottom-toolbar.tab-close-button button.frame,
+  tab .sidebar .bottom-toolbar.tab-close-button button.frame,
+  .sidebar tab .bottom-toolbar.tab-indicator button.frame,
+  tab .sidebar .bottom-toolbar.tab-indicator button.frame {
+    border-style: none; }
+
+iconview.view.cell {
+  border-radius: 0.250000001rem; }
+  iconview.view.cell:selected {
+    background: rgba(51, 51, 51, 0.15); }
+
+flowboxchild {
+  border-radius: 0.250000001rem; }
+  flowboxchild:focus, flowboxchild:selected {
+    background: rgba(51, 51, 51, 0.15); }
+
+scrolledwindow > viewport.frame {
+  border-style: none; }
+
+.view {
+  background-color: @base_color;
+  color: #333; }
+  .view:disabled {
+    background-color: rgba(0, 0, 0, 0.03);
+    color: #979797; }
+
+.terminal {
+  background-color: #252e32;
+  border-radius: 0.250000001rem;
+  color: #94a3a5;
+  font-family: monospace; }
+  .terminal text selection, .terminal text .badge.flat, .terminal text button.flat:focus, .terminal text button.image-button:not(.text-button):focus, .terminal text .linked button.flat.suggested-action:not(:disabled), .linked .terminal text button.flat.suggested-action:not(:disabled), .terminal text .linked button.image-button.suggested-action:not(:disabled), .linked .terminal text button.image-button.suggested-action:not(:disabled), .terminal text button.circular.image-button.suggested-action:not(:disabled), .terminal text button.model.image-button.suggested-action:not(:disabled), .terminal text button.raised.image-button.suggested-action:not(:disabled), .terminal text button.suggested-action:not(:disabled), .terminal text calendar:selected, .terminal text list row:focus:selected, list .terminal text row:focus:selected, .terminal text tab .badge.tab-close-button, tab .terminal text .badge.tab-close-button,
+  .terminal text tab .badge.tab-indicator,
+  tab .terminal text .badge.tab-indicator, .terminal text tab button.tab-close-button:focus, tab .terminal text button.tab-close-button:focus,
+  .terminal text tab button.tab-indicator:focus,
+  tab .terminal text button.tab-indicator:focus, .terminal text .linked tab button.suggested-action.tab-close-button:not(:disabled), .linked tab .terminal text button.suggested-action.tab-close-button:not(:disabled), .terminal text tab .linked button.suggested-action.tab-close-button:not(:disabled), tab .linked .terminal text button.suggested-action.tab-close-button:not(:disabled),
+  .terminal text .linked tab button.suggested-action.tab-indicator:not(:disabled),
+  .linked tab .terminal text button.suggested-action.tab-indicator:not(:disabled),
+  .terminal text tab .linked button.suggested-action.tab-indicator:not(:disabled),
+  tab .linked .terminal text button.suggested-action.tab-indicator:not(:disabled), .terminal text .sidebar .inline-toolbar button.badge, .sidebar .inline-toolbar .terminal text button.badge, .terminal text .sidebar .emoji-picker stack box > box.horizontal button.badge, .sidebar .emoji-picker stack box > box.horizontal .terminal text button.badge, .terminal text .emoji-picker stack .sidebar box > box.horizontal button.badge, .emoji-picker stack .sidebar box > box.horizontal .terminal text button.badge, .terminal text .sidebar .inline-toolbar button:focus, .sidebar .inline-toolbar .terminal text button:focus, .terminal text .sidebar .emoji-picker stack box > box.horizontal button:focus, .sidebar .emoji-picker stack box > box.horizontal .terminal text button:focus, .terminal text .emoji-picker stack .sidebar box > box.horizontal button:focus, .emoji-picker stack .sidebar box > box.horizontal .terminal text button:focus, .terminal text .linked .sidebar .inline-toolbar button.suggested-action:not(:disabled), .linked .sidebar .inline-toolbar .terminal text button.suggested-action:not(:disabled), .terminal text .sidebar .inline-toolbar .linked button.suggested-action:not(:disabled), .sidebar .inline-toolbar .linked .terminal text button.suggested-action:not(:disabled), .terminal text .linked .sidebar .emoji-picker stack box > box.horizontal button.suggested-action:not(:disabled), .linked .sidebar .emoji-picker stack box > box.horizontal .terminal text button.suggested-action:not(:disabled), .terminal text .sidebar .emoji-picker stack box > box.horizontal .linked button.suggested-action:not(:disabled), .sidebar .emoji-picker stack box > box.horizontal .linked .terminal text button.suggested-action:not(:disabled), .terminal text .linked .emoji-picker stack .sidebar box > box.horizontal button.suggested-action:not(:disabled), .linked .emoji-picker stack .sidebar box > box.horizontal .terminal text button.suggested-action:not(:disabled), .terminal text .emoji-picker stack .sidebar box > box.horizontal .linked button.suggested-action:not(:disabled), .emoji-picker stack .sidebar box > box.horizontal .linked .terminal text button.suggested-action:not(:disabled), .terminal text treeview.view.cell:focus:selected, .terminal text iconview.view.cell:focus:selected, .terminal text flowboxchild:focus:selected {
+    background-color: #93a1a1;
+    color: #252e32; }
+
+rubberband {
+  background-color: alpha (@accent_color, 0.15);
+  border: 1px solid alpha (@accent_color, 0.5);
+  border-radius: 0.250000001rem; }
+
+viewswitcher button {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border-top: 0;
+  border-bottom: 0;
+  box-shadow: none; }
+  viewswitcher button image {
+    -gtk-icon-palette: error @text_color, success @text_color, warning @text_color; }
+  viewswitcher button:not(:checked):not(:hover) {
+    background: transparent; }
+  viewswitcher button:not(:only-child):not(:last-child) {
+    border-right-width: 0; }
+  viewswitcher button:not(only-child):first-child:not(:checked):not(:hover), viewswitcher button:not(:checked):not(:hover) + viewswitcher button:not(:checked):not(:hover) {
+    border-left-color: transparent; }
+  viewswitcher button:not(only-child):last-child:not(:checked):not(:hover) {
+    border-right-color: transparent; }
+  viewswitcher button:not(:checked):hover:not(:backdrop) {
+    background-image: image(lighter(@color_primary)); }
+  viewswitcher button:not(only-child):first-child:not(:checked):hover, viewswitcher button:not(:checked):hover + viewswitcher button:not(:checked):not(:hover), viewswitcher button:not(:checked):not(:hover) + viewswitcher button:not(:checked):hover {
+    border-left-color: shade(@color_primary, 1.15); }
+  viewswitcher button:not(only-child):last-child:not(:checked):hover {
+    border-right-color: shade(@color_primary, 1.15); }
+  viewswitcher button:not(:checked):hover:backdrop {
+    background-image: image(@color_primary); }
+  viewswitcher button stack > box label.active {
+    font-weight: bold; }
+  viewswitcher button stack > box.narrow {
+    padding-top: 0.250000001rem;
+    padding-bottom: 0.250000001rem; }
+    viewswitcher button stack > box.narrow image, viewswitcher button stack > box.narrow label {
+      padding-left: 0.500000001rem;
+      padding-right: 0.500000001rem; }
+  viewswitcher button stack > box.wide {
+    padding: 0 9px; }
+  headerbar viewswitcher button:not(:checked):hover:not(:backdrop) {
+    background-image: linear-gradient(to top, shade(alpha(@color_primary, 0.7), 0.96) 0.1666666677rem, alpha(@color_primary, 0.7)); }
+  headerbar viewswitcher button:not(:checked):not(only-child):first-child:hover, headerbar viewswitcher button:not(:checked):hover + headerbar viewswitcher button:not(:checked):not(:hover), headerbar viewswitcher button:not(:checked):not(:hover) + headerbar viewswitcher button:not(:checked):hover {
+    border-left-color: @color_primary; }
+  headerbar viewswitcher button:not(:checked):not(only-child):last-child:hover {
+    border-right-color: @color_primary; }
+  headerbar viewswitcher button:not(:checked):hover:backdrop {
+    background-image: image(@color_primary); }
+
+.background,
+.gtkstyle-fallback {
+  background-color: #fafafa;
+  color: #333; }
+
+assistant > decoration,
+dialog > decoration,
+messagedialog > decoration,
+message-dialog > decoration,
+printdialog > decoration,
+window.csd:not(.popup):not(.menu) > decoration {
+  margin: 1.000000001rem; }
+
+assistant > .titlebar,
+dialog > .titlebar,
+messagedialog > .titlebar,
+message-dialog > .titlebar,
+printdialog > .titlebar,
+window.csd:not(.popup):not(.menu) > .titlebar {
+  border-radius: 0.500000001rem 0.500000001rem 0 0; }
+
+assistant > decoration,
+printdialog > decoration,
+window:not(.popup):not(.menu) > decoration {
+  border-radius: 0.500000001rem 0.500000001rem 0 0; }
+
+assistant.csd,
+printdialog.csd,
+window:not(.popup):not(.menu).csd {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); }
+  assistant.csd > decoration,
+  printdialog.csd > decoration,
+  window:not(.popup):not(.menu).csd > decoration {
+    box-shadow: 0 13px 16px 4px transparent, 0 2px 4px 2px rgba(0, 0, 0, 0.1), 0 15px 12px -10px rgba(0, 0, 0, 0.4), 0 8px 14px 4px rgba(0, 0, 0, 0.15); }
+    assistant.csd > decoration:backdrop,
+    printdialog.csd > decoration:backdrop,
+    window:not(.popup):not(.menu).csd > decoration:backdrop {
+      box-shadow: 0 13px 16px 4px transparent, 0 3px 4px rgba(0, 0, 0, 0.15), 0 3px 3px -3px rgba(0, 0, 0, 0.35); }
+  assistant.csd.maximized > decoration,
+  printdialog.csd.maximized > decoration,
+  window:not(.popup):not(.menu).csd.maximized > decoration {
+    background-color: black;
+    border-radius: 0;
+    box-shadow: none; }
+  assistant.csd.tiled:not(.maximized) > decoration,
+  printdialog.csd.tiled:not(.maximized) > decoration,
+  window:not(.popup):not(.menu).csd.tiled:not(.maximized) > decoration {
+    background-color: black;
+    border-radius: 0;
+    box-shadow: 0 13px 16px 4px transparent, 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  assistant.csd.tiled:not(.maximized).tiled-left.tiled-top .titlebar,
+  printdialog.csd.tiled:not(.maximized).tiled-left.tiled-top .titlebar,
+  window:not(.popup):not(.menu).csd.tiled:not(.maximized).tiled-left.tiled-top .titlebar {
+    border-top-right-radius: 0; }
+  assistant.csd.tiled:not(.maximized).tiled-left.tiled-bottom actionbar,
+  printdialog.csd.tiled:not(.maximized).tiled-left.tiled-bottom actionbar,
+  window:not(.popup):not(.menu).csd.tiled:not(.maximized).tiled-left.tiled-bottom actionbar {
+    border-bottom-right-radius: 0; }
+  assistant.csd.tiled:not(.maximized).tiled-right.tiled-top .titlebar,
+  printdialog.csd.tiled:not(.maximized).tiled-right.tiled-top .titlebar,
+  window:not(.popup):not(.menu).csd.tiled:not(.maximized).tiled-right.tiled-top .titlebar {
+    border-top-left-radius: 0; }
+  assistant.csd.tiled:not(.maximized).tiled-right.tiled-bottom actionbar,
+  printdialog.csd.tiled:not(.maximized).tiled-right.tiled-bottom actionbar,
+  window:not(.popup):not(.menu).csd.tiled:not(.maximized).tiled-right.tiled-bottom actionbar {
+    border-bottom-left-radius: 0; }
+  assistant.csd .titlebar,
+  printdialog.csd .titlebar,
+  window:not(.popup):not(.menu).csd .titlebar {
+    box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px alpha(shade(@color_primary, 0.7), 0.4), 0 1px 0.1666666677rem rgba(0, 0, 0, 0.2);
+    padding: 0.500000001rem; }
+    assistant.csd .titlebar:backdrop,
+    printdialog.csd .titlebar:backdrop,
+    window:not(.popup):not(.menu).csd .titlebar:backdrop {
+      box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px alpha(shade(@color_primary, 0.7), 0.3), 0 1px 0.1666666677rem rgba(0, 0, 0, 0.15); }
+    assistant.csd .titlebar.default-decoration,
+    printdialog.csd .titlebar.default-decoration,
+    window:not(.popup):not(.menu).csd .titlebar.default-decoration {
+      padding: 0.250000001rem; }
+    assistant.csd .titlebar.flat, assistant.csd tab .titlebar.tab-close-button, tab assistant.csd .titlebar.tab-close-button,
+    assistant.csd tab .titlebar.tab-indicator,
+    tab assistant.csd .titlebar.tab-indicator, assistant.csd .sidebar .inline-toolbar button.titlebar, .sidebar .inline-toolbar assistant.csd button.titlebar, assistant.csd .sidebar .emoji-picker stack box > box.horizontal button.titlebar, .sidebar .emoji-picker stack box > box.horizontal assistant.csd button.titlebar, assistant.csd .emoji-picker stack .sidebar box > box.horizontal button.titlebar, .emoji-picker stack .sidebar box > box.horizontal assistant.csd button.titlebar, assistant.csd .sidebar actionbar.flat button.titlebar, .sidebar actionbar.flat assistant.csd button.titlebar,
+    assistant.csd .sidebar .bottom-toolbar.flat button.titlebar,
+    .sidebar .bottom-toolbar.flat assistant.csd button.titlebar,
+    assistant.csd .sidebar tab .bottom-toolbar.tab-close-button button.titlebar,
+    .sidebar tab .bottom-toolbar.tab-close-button assistant.csd button.titlebar,
+    assistant.csd tab .sidebar .bottom-toolbar.tab-close-button button.titlebar,
+    tab .sidebar .bottom-toolbar.tab-close-button assistant.csd button.titlebar,
+    assistant.csd .sidebar tab .bottom-toolbar.tab-indicator button.titlebar,
+    .sidebar tab .bottom-toolbar.tab-indicator assistant.csd button.titlebar,
+    assistant.csd tab .sidebar .bottom-toolbar.tab-indicator button.titlebar,
+    tab .sidebar .bottom-toolbar.tab-indicator assistant.csd button.titlebar,
+    printdialog.csd .titlebar.flat,
+    printdialog.csd tab .titlebar.tab-close-button,
+    tab printdialog.csd .titlebar.tab-close-button,
+    printdialog.csd tab .titlebar.tab-indicator,
+    tab printdialog.csd .titlebar.tab-indicator,
+    printdialog.csd .sidebar .inline-toolbar button.titlebar,
+    .sidebar .inline-toolbar printdialog.csd button.titlebar,
+    printdialog.csd .sidebar .emoji-picker stack box > box.horizontal button.titlebar,
+    .sidebar .emoji-picker stack box > box.horizontal printdialog.csd button.titlebar,
+    printdialog.csd .emoji-picker stack .sidebar box > box.horizontal button.titlebar,
+    .emoji-picker stack .sidebar box > box.horizontal printdialog.csd button.titlebar,
+    printdialog.csd .sidebar actionbar.flat button.titlebar,
+    .sidebar actionbar.flat printdialog.csd button.titlebar,
+    printdialog.csd .sidebar .bottom-toolbar.flat button.titlebar,
+    .sidebar .bottom-toolbar.flat printdialog.csd button.titlebar,
+    printdialog.csd .sidebar tab .bottom-toolbar.tab-close-button button.titlebar,
+    .sidebar tab .bottom-toolbar.tab-close-button printdialog.csd button.titlebar,
+    printdialog.csd tab .sidebar .bottom-toolbar.tab-close-button button.titlebar,
+    tab .sidebar .bottom-toolbar.tab-close-button printdialog.csd button.titlebar,
+    printdialog.csd .sidebar tab .bottom-toolbar.tab-indicator button.titlebar,
+    .sidebar tab .bottom-toolbar.tab-indicator printdialog.csd button.titlebar,
+    printdialog.csd tab .sidebar .bottom-toolbar.tab-indicator button.titlebar,
+    tab .sidebar .bottom-toolbar.tab-indicator printdialog.csd button.titlebar,
+    window:not(.popup):not(.menu).csd .titlebar.flat,
+    window:not(.popup):not(.menu).csd tab .titlebar.tab-close-button,
+    tab window:not(.popup):not(.menu).csd .titlebar.tab-close-button,
+    window:not(.popup):not(.menu).csd tab .titlebar.tab-indicator,
+    tab window:not(.popup):not(.menu).csd .titlebar.tab-indicator,
+    window:not(.popup):not(.menu).csd .sidebar .inline-toolbar button.titlebar,
+    .sidebar .inline-toolbar window:not(.popup):not(.menu).csd button.titlebar,
+    window:not(.popup):not(.menu).csd .sidebar .emoji-picker stack box > box.horizontal button.titlebar,
+    .sidebar .emoji-picker stack box > box.horizontal window:not(.popup):not(.menu).csd button.titlebar,
+    window:not(.popup):not(.menu).csd .emoji-picker stack .sidebar box > box.horizontal button.titlebar,
+    .emoji-picker stack .sidebar box > box.horizontal window:not(.popup):not(.menu).csd button.titlebar,
+    window:not(.popup):not(.menu).csd .sidebar actionbar.flat button.titlebar,
+    .sidebar actionbar.flat window:not(.popup):not(.menu).csd button.titlebar,
+    window:not(.popup):not(.menu).csd .sidebar .bottom-toolbar.flat button.titlebar,
+    .sidebar .bottom-toolbar.flat window:not(.popup):not(.menu).csd button.titlebar,
+    window:not(.popup):not(.menu).csd .sidebar tab .bottom-toolbar.tab-close-button button.titlebar,
+    .sidebar tab .bottom-toolbar.tab-close-button window:not(.popup):not(.menu).csd button.titlebar,
+    window:not(.popup):not(.menu).csd tab .sidebar .bottom-toolbar.tab-close-button button.titlebar,
+    tab .sidebar .bottom-toolbar.tab-close-button window:not(.popup):not(.menu).csd button.titlebar,
+    window:not(.popup):not(.menu).csd .sidebar tab .bottom-toolbar.tab-indicator button.titlebar,
+    .sidebar tab .bottom-toolbar.tab-indicator window:not(.popup):not(.menu).csd button.titlebar,
+    window:not(.popup):not(.menu).csd tab .sidebar .bottom-toolbar.tab-indicator button.titlebar,
+    tab .sidebar .bottom-toolbar.tab-indicator window:not(.popup):not(.menu).csd button.titlebar {
+      background: #fafafa;
+      box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.2), -1px 0 0 0 rgba(0, 0, 0, 0.2), 0 -1px 0 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07); }
+  assistant.csd stack.titlebar > .titlebar,
+  printdialog.csd stack.titlebar > .titlebar,
+  window:not(.popup):not(.menu).csd stack.titlebar > .titlebar {
+    box-shadow: none; }
+
+assistant.rounded,
+printdialog.rounded,
+window:not(.popup):not(.menu).rounded {
+  border-radius: 0 0 0.500000001rem 0.500000001rem; }
+  assistant.rounded > decoration,
+  printdialog.rounded > decoration,
+  window:not(.popup):not(.menu).rounded > decoration {
+    border-radius: 0.500000001rem; }
+
+assistant.ssd decoration,
+printdialog.ssd decoration,
+window:not(.popup):not(.menu).ssd decoration {
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  margin: 12px; }
+
+assistant.ssd .titlebar,
+printdialog.ssd .titlebar,
+window:not(.popup):not(.menu).ssd .titlebar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px 6px 0 0;
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07);
+  padding: 3px; }
+  assistant.ssd .titlebar button,
+  printdialog.ssd .titlebar button,
+  window:not(.popup):not(.menu).ssd .titlebar button {
+    border-radius: 3px;
+    padding: 3px; }
+
+assistant.unified,
+printdialog.unified,
+window:not(.popup):not(.menu).unified {
+  border-radius: 0.500000001rem; }
+  assistant.unified decoration,
+  assistant.unified decoration-overlay,
+  printdialog.unified decoration,
+  printdialog.unified decoration-overlay,
+  window:not(.popup):not(.menu).unified decoration,
+  window:not(.popup):not(.menu).unified decoration-overlay {
+    border-radius: 0.500000001rem; }
+  assistant.unified decoration,
+  printdialog.unified decoration,
+  window:not(.popup):not(.menu).unified decoration {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 13px 16px 4px transparent, 0 2px 4px 2px rgba(0, 0, 0, 0.1), 0 15px 12px -10px rgba(0, 0, 0, 0.4), 0 8px 14px 4px rgba(0, 0, 0, 0.15); }
+    assistant.unified decoration:backdrop,
+    printdialog.unified decoration:backdrop,
+    window:not(.popup):not(.menu).unified decoration:backdrop {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 13px 16px 4px transparent, 0 3px 4px rgba(0, 0, 0, 0.15), 0 3px 3px -3px rgba(0, 0, 0, 0.35); }
+  assistant.unified decoration-overlay,
+  printdialog.unified decoration-overlay,
+  window:not(.popup):not(.menu).unified decoration-overlay {
+    box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07); }
+  assistant.unified .titlebar,
+  printdialog.unified .titlebar,
+  window:not(.popup):not(.menu).unified .titlebar {
+    box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px alpha(shade(@color_primary, 0.7), 0.4), 0 1px 0.1666666677rem rgba(0, 0, 0, 0.2); }
+    assistant.unified .titlebar:backdrop:not(.flat),
+    printdialog.unified .titlebar:backdrop:not(.flat),
+    window:not(.popup):not(.menu).unified .titlebar:backdrop:not(.flat) {
+      box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07), 0 0 0 1px alpha(shade(@color_primary, 0.7), 0.3), 0 1px 0.1666666677rem rgba(0, 0, 0, 0.15); }
+
+assistant .titlebar,
+printdialog .titlebar,
+window:not(.popup):not(.menu) .titlebar {
+  background-color: @color_primary;
+  color: #333; }
+  assistant .titlebar .title,
+  printdialog .titlebar .title,
+  window:not(.popup):not(.menu) .titlebar .title {
+    font-weight: 600;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5); }
+  assistant .titlebar .subtitle,
+  printdialog .titlebar .subtitle,
+  window:not(.popup):not(.menu) .titlebar .subtitle {
+    opacity: 0.75;
+    font-size: 80%; }
+  assistant .titlebar .titlebutton,
+  assistant .titlebar .image-button,
+  assistant .titlebar .mode-switch,
+  printdialog .titlebar .titlebutton,
+  printdialog .titlebar .image-button,
+  printdialog .titlebar .mode-switch,
+  window:not(.popup):not(.menu) .titlebar .titlebutton,
+  window:not(.popup):not(.menu) .titlebar .image-button,
+  window:not(.popup):not(.menu) .titlebar .mode-switch {
+    -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.5); }
+  assistant .titlebar popover,
+  assistant .titlebar menu,
+  printdialog .titlebar popover,
+  printdialog .titlebar menu,
+  window:not(.popup):not(.menu) .titlebar popover,
+  window:not(.popup):not(.menu) .titlebar menu {
+    text-shadow: none;
+    -gtk-icon-shadow: none; }
+
+dialog,
+messagedialog,
+message-dialog {
+  box-shadow: inset 0 -1px 0 0 alpha(@highlight_color, 0.2), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07); }
+  dialog > decoration,
+  messagedialog > decoration,
+  message-dialog > decoration {
+    border-radius: 0.500000001rem;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 13px 16px 4px transparent, 0 3px 8px 2px rgba(0, 0, 0, 0.1), 0 5px 5px -3px rgba(0, 0, 0, 0.4), 0 8px 5px 1px rgba(0, 0, 0, 0.1); }
+    dialog > decoration:backdrop,
+    messagedialog > decoration:backdrop,
+    message-dialog > decoration:backdrop {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 13px 16px 4px transparent, 0 3px 4px rgba(0, 0, 0, 0.15), 0 3px 3px -3px rgba(0, 0, 0, 0.35); }
+  dialog.csd,
+  messagedialog.csd,
+  message-dialog.csd {
+    border-radius: 0 0 0.500000001rem 0.500000001rem; }
+    dialog.csd > .titlebar,
+    messagedialog.csd > .titlebar,
+    message-dialog.csd > .titlebar {
+      background-color: #fafafa;
+      box-shadow: inset 0 1px 0 0 alpha(@highlight_color, 0.3), inset 1px 0 0 0 alpha(@highlight_color, 0.07), inset -1px 0 0 0 alpha(@highlight_color, 0.07);
+      padding: 0.500000001rem; }
+      dialog.csd > .titlebar.default-decoration,
+      messagedialog.csd > .titlebar.default-decoration,
+      message-dialog.csd > .titlebar.default-decoration {
+        padding: 0; }
+      dialog.csd > .titlebar label.title,
+      messagedialog.csd > .titlebar label.title,
+      message-dialog.csd > .titlebar label.title {
+        text-shadow: none;
+        -gtk-icon-shadow: none;
+        font-size: 0.1px;
+        color: transparent; }
+  dialog .dialog-action-area,
+  messagedialog .dialog-action-area,
+  message-dialog .dialog-action-area {
+    margin: 0.5833333343rem;
+    margin-bottom: 0.6666666677rem; }
+
+messagedialog .dialog-action-area,
+message-dialog .dialog-action-area {
+  margin-top: 1.3333333343rem; }
+
+
+@import 'elemactary.css';
+
