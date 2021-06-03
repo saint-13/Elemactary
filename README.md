@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/saint-13/Elemactary-Dark/master/Screenshot/Elemactary-Dark-logo.png" width="128">
 
-[Elemactary-Dark](https://www.gnome-look.org/p/1406950/)
+[Elemactary](https://www.gnome-look.org/p/1406950/)
 
 <b>MacOS Style theme for ElementaryOS</b>
 
