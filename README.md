@@ -12,7 +12,10 @@ may work on other DEs, BUT not guaranteed.
 
 [Versoin 2.0](https://github.com/saint-13/Elemactary-Dark/releases/download/Elemactary_2.0_BETA/Elemactary-v2.0-Beta.zip) works best in ElementaryOS 6 Odin:
 
-   it's based on default EOS theme.different highlight colors (e.g: Strawberry, Coco,...) are included. it's in Beta version, so some apps (e.g: calculator) may don't have correct theme. if you find bugs, please report to me.
+   it's based on default EOS theme. 
+   different highlight colors (e.g: Strawberry, Coco,...) are included. 
+   it's in Beta version, so some apps (e.g: calculator) may don't have correct theme. 
+   if you find bugs, please report to me.
 
 [Versoin 1.2](https://github.com/saint-13/Elemactary-Dark/releases/download/Elemactary_1.2/Elemactary-Dark-v1.2.zip) works best in ElementaryOS 5 Hera:
 
